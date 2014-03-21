@@ -1,0 +1,96 @@
+/* $. Project Defaults
+\*----------------------------------------------------------------*/
+html {
+	font-family: $font-sans;
+	line-height: 1.5;
+	font-size: 100%; // 16px
+
+}
+
+body {
+	color: $color-text;
+	background-color: $color-background; }
+
+/* -- Vertical Rhythm -- */
+h1, h2, h3, h4, h5, h6 { margin-bottom: .65em; margin-top: $baseline;  line-height: 1; }
+h1, blockquote, pre, p, ul, ol, dl, hr { margin-top: 0; }
+p, ul, ol, dl, hr, form, table, blockquote, pre { margin-bottom: $baseline; }
+hr { border-top: 1px solid $color-keyline; }
+blockquote > :last-child, ul > :last-child, ol > :last-child, dl > :last-child { margin-bottom: 0; }
+
+/* -- Headings -- */
+h1, .alpha { @include font-size(36); }	
+h2, .beta {  @include font-size(30); }
+h3, .gamma { @include font-size(24); }
+h4, .delta { @include font-size(20); }	
+h5, .epsilon { @include font-size(16); }
+h6, .zeta { @include font-size(14); }
+
+/* -- Lists -- */
+ul, ol { margin-left: 2em; padding-left: 0; }
+li { margin-bottom: .5em; }
+li ul, li ol { margin-top: $baseline / 2; margin-bottom: 0; }
+dt { font-weight: bold; }
+dd { margin-left: 0; margin-bottom: $baseline / 2; font-style: italic; }
+
+/* -- Tables -- */
+caption { padding-bottom: .5em; font-style: italic; }
+th, td { padding: .25em .5em; border: 1px solid $color-keyline; }
+tr:nth-child(odd) td { background-color: #F6F6F6; }
+th, legend { font-weight: bold; background: $color-comp; }	
+
+/* -- Forms -- */
+label { display: block; padding-bottom: .25em; font-weight: bold; }
+
+input,
+select,
+textarea {
+	padding: .5em;
+	border: 1px solid;
+	color: #666;
+	background-color: #FFF;
+	border-color: #666 #CCC #CCC #666; }
+
+button,
+.btn:link,
+input[type=submit] {
+	display: inline-block;
+	padding: .5em 1em;
+	border: 0;
+	color: #FFF;
+	background-color: $color-comp; }
+
+/* -- Blockquotes -- */
+blockquote {
+	margin-left: 0;
+	margin-right: 0;
+
+	@include respond-min($bp2) {
+		padding-left: 2em;
+		padding-right: 2em; }
+}
+blockquote { font-family: $font-serif; font-style: italic; clear: both; }
+blockquote p { font-size: 1.35em; }
+blockquote p + .source { margin-top: -$baseline; }
+.source { display: block; font-family: $font-sans; font-size: 1em; font-weight: bold; font-style: normal; }
+.source:before { content:"\2013\0020"; }
+
+a:active, a:focus { position: relative; top: 1px; }
+
+/* Links
+----------------------------------*/
+
+a {
+	text-decoration: none;
+	color: $color-link; }
+
+/* -- visited -- */
+a:visited {
+	color: $color-link; }
+
+.btn:visited {
+	@extend .btn; }
+
+/* -- hovers -- */
+a:hover {
+	color: $color-link-hover; }

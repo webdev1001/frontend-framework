@@ -1,0 +1,28 @@
+// Major Breakpoints
+$bp1: 30em;
+$bp2: 48em;
+$bp3: 62em;
+$bp4: 78em;
+
+// Colours
+$color-text: #222;
+$color-brand: #663399;
+$color-comp: #CDCCB7;
+$color-background: #E8E8E0;
+
+$color-link: $color-brand;
+$color-link-hover: #222;
+
+// Typography
+$baseline: 1.5rem;
+$font-sans: sans-serif;
+$font-serif: serif;
+
+// Borders
+$color-keyline: #CCC;
+
+// Layout
+$container-max-width: 68.5em;
+$media-img-gutter: 2em;
+$island-padding: 1.5em;
+$islet-padding: $island-padding / 2;
