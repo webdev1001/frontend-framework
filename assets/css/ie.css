@@ -327,56 +327,14 @@ textarea {
 /* $. Project Defaults
 \*----------------------------------------------------------------*/
 html {
-  font-family: sans-serif;
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
   line-height: 1.5;
-  font-size: 100%; }
+  font-size: 100%;
+  font-size: 112.5%; }
 
 body {
   color: #222222;
-  background-color: #e8e8e0; }
-
-/* -- Vertical Rhythm -- */
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .65em;
-  margin-top: 1.5rem;
-  line-height: 1; }
-
-h1, blockquote, pre, p, ul, ol, dl, hr {
-  margin-top: 0; }
-
-p, ul, ol, dl, hr, form, table, blockquote, pre {
-  margin-bottom: 1.5rem; }
-
-hr {
-  border-top: 1px solid #cccccc; }
-
-blockquote > :last-child, ul > :last-child, ol > :last-child, dl > :last-child {
-  margin-bottom: 0; }
-
-/* -- Headings -- */
-h1, .alpha {
-  font-size: 36px;
-  font-size: 2.25rem; }
-
-h2, .beta {
-  font-size: 30px;
-  font-size: 1.875rem; }
-
-h3, .gamma {
-  font-size: 24px;
-  font-size: 1.5rem; }
-
-h4, .delta {
-  font-size: 20px;
-  font-size: 1.25rem; }
-
-h5, .epsilon {
-  font-size: 16px;
-  font-size: 1rem; }
-
-h6, .zeta {
-  font-size: 14px;
-  font-size: 0.875rem; }
+  background-color: #eeeeee; }
 
 /* -- Lists -- */
 ul, ol {
@@ -438,6 +396,64 @@ input[type=submit] {
   color: #FFF;
   background-color: #cdccb7; }
 
+/* -- Links -- */
+a {
+  text-decoration: none;
+  color: #663399; }
+
+/* -- visited -- */
+a:visited {
+  color: #663399; }
+
+/* -- hovers -- */
+a:hover {
+  color: #7f40bf; }
+
+/* $. Typography and vertical rhythm
+\*----------------------------------------------------------------*/
+/* -- Vertical Rhythm -- */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .65em;
+  margin-top: 1.5rem;
+  line-height: 1; }
+
+h1, blockquote, pre, p, ul, ol, dl, hr {
+  margin-top: 0; }
+
+p, ul, ol, dl, hr, form, table, blockquote, pre {
+  margin-bottom: 1.5rem; }
+
+hr {
+  border-top: 1px solid #cccccc; }
+
+blockquote > :last-child, ul > :last-child, ol > :last-child, dl > :last-child {
+  margin-bottom: 0; }
+
+/* -- Headings -- */
+h1, .alpha {
+  font-size: 36px;
+  font-size: 2.25rem; }
+
+h2, .beta {
+  font-size: 30px;
+  font-size: 1.875rem; }
+
+h3, .gamma {
+  font-size: 24px;
+  font-size: 1.5rem; }
+
+h4, .delta {
+  font-size: 20px;
+  font-size: 1.25rem; }
+
+h5, .epsilon {
+  font-size: 16px;
+  font-size: 1rem; }
+
+h6, .zeta {
+  font-size: 14px;
+  font-size: 0.875rem; }
+
 /* -- Blockquotes -- */
 blockquote {
   margin-left: 0;
@@ -446,7 +462,7 @@ blockquote {
   padding-right: 2em; }
 
 blockquote {
-  font-family: serif;
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
   font-style: italic;
   clear: both; }
 
@@ -458,7 +474,7 @@ blockquote p + .source {
 
 .source {
   display: block;
-  font-family: sans-serif;
+  font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
   font-size: 1em;
   font-weight: bold;
   font-style: normal; }
@@ -466,23 +482,25 @@ blockquote p + .source {
 .source:before {
   content: "\2013\0020"; }
 
-a:active, a:focus {
-  position: relative;
-  top: 1px; }
+/* -- Common text patterns -- */
+.intro {
+  font-size: 1.25em; }
 
-/* Links
-----------------------------------*/
-a {
-  text-decoration: none;
-  color: #663399; }
+.headline {
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: .45em; }
 
-/* -- visited -- */
-a:visited {
-  color: #663399; }
-
-/* -- hovers -- */
-a:hover {
-  color: #222222; }
+/*----------------------------------------------------------------------------------------*\
+ $.Layout
+\*----------------------------------------------------------------------------------------*/
+/* $. Containers
+\*----------------------------------------------------------------*/
+.container {
+  margin: 0 auto;
+  width: 92.5%;
+  min-width: 15em;
+  max-width: 68.5em;
+  width: 85%; }
 
 /*----------------------------------------------------------------------------------------*\
  $.Modules

@@ -1,3 +1,4 @@
-@import "compass";
-@import "mixins/media-queries";
+@import "compass";									// Compass core (http://compass-style.org/reference/compass/)
+@import "susy";											// Susy grids (http://susy.oddbird.net/)
+@import "mixins/media-queries";			// Jake Archibald's sass-ie (https://github.com/jakearchibald/sass-ie)
 @import "mixins/typography";

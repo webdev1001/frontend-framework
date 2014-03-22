@@ -8,16 +8,26 @@
  *
 \*----------------------------------------------------------------------------------------*/
 
-@import "config/vars";
-@import "config/mixins";
+@import "config/vars";				// Global variables
+@import "config/mixins";			// Project and third-party mixins
 
 /*----------------------------------------------------------------------------------------*\
  $.Base
 \*----------------------------------------------------------------------------------------*/
 
-@import "normalize";
-@import "base/defaults";
-@import "base/project";
+@import "normalize";					// Normalize.css
+@import "base/defaults";			// General defaults
+@import "base/project";				// Project specific defaults
+@import "base/typography";				// Project specific defaults
+
+/*----------------------------------------------------------------------------------------*\
+ $.Layout
+\*----------------------------------------------------------------------------------------*/
+
+// NOTE: Grids are to be handled using Susy – mixins provided via Compass and included 
+// in config/mixins
+
+@import "layout/containers";	// Main container blocks
 
 /*----------------------------------------------------------------------------------------*\
  $.Modules
