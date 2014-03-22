@@ -3,6 +3,7 @@ module.exports = function(grunt) {
 	//Load NPM tasks
 
 	grunt.loadNpmTasks('grunt-contrib-compass');
+	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-imageoptim');
@@ -31,6 +32,18 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+
+		autoprefixer: {
+			options: {
+				browsers: ['last 2 version', 'ie 8', 'ie 9', 'Firefox ESR', 'Opera 12.1']
+			},
+		  files: {
+	      expand: true,
+	      flatten: true,
+	      src: 'assets/css/*.css',
+	      dest: 'assets/css'
+	    },
+  	},
 
 		// Optimise images
 
@@ -66,7 +79,7 @@ module.exports = function(grunt) {
 
 			css: {
 				files: 'assets/scss/**/*.scss',
-				tasks: ['compass'],
+				tasks: ['compass', 'autoprefixer'],
 				options: {
 					livereload: true
 				}
