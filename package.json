@@ -10,6 +10,8 @@
     "grunt-imageoptim": "~1.4.1",
     "grunt-svg2png": "~0.2.1",
     "grunt-autoprefixer": "~0.7.2",
-    "grunt-modernizr": "~0.5.2"
+    "grunt-modernizr": "~0.5.2",
+    "grunt-grunticon": "~1.0.0",
+    "grunt-svgmin": "~0.4.0"
   }
 }

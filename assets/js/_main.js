@@ -18,3 +18,6 @@ MAIN = (function ($) {
 })(jQuery);
 
 MAIN.start(); 
+
+// Grunticon stylesheet loader
+grunticon(["assets/grunticon/icons.data.svg.css", "assets/grunticon/icons.data.png.css", "assets/grunticon/icons.fallback.css"]);

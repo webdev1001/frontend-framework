@@ -9,6 +9,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-imageoptim');
 	grunt.loadNpmTasks('grunt-svg2png');
 	grunt.loadNpmTasks("grunt-modernizr");
+	grunt.loadNpmTasks('grunt-svgmin');
+	grunt.loadNpmTasks('grunt-grunticon');
  
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -18,7 +20,7 @@ module.exports = function(grunt) {
 		uglify: {
 			prod: {
 				files: {
-					'assets/js/all.min.js': ['bower_components/jquery/dist/jquery.min.js', 'assets/js/vendor/*.js', 'assets/js/_*.js']
+					'assets/js/all.min.js': ['bower_components/jquery/dist/jquery.min.js', 'assets/grunticon/grunticon.loader.txt', 'assets/js/vendor/*.js', 'assets/js/_*.js']
 				}
 			}
 		},
@@ -59,15 +61,47 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// Rasterise SVGs
+		// Compress SVGs
 
-		svg2png: {
-			prod: {
-				files: [
-					{ src: ['assets/img/**/*.svg'] }
-				]
-			}
-		},
+		svgmin: { 
+	    options: {          
+	      plugins: [{
+	     		removeViewBox: false
+	      }, {
+	      	removeUselessStrokeAndFill: false
+	      }, {
+	      	convertPathData: { 
+	        	straightCurves: false
+	        }
+	      }]
+	    },
+	    dist: {
+	      files: [{
+	        expand: true,
+	        cwd: 'assets/img',
+	        src: ['**/*.svg'],
+	        dest: 'assets/img',
+	        ext: '.svg'
+	      }]
+	    }
+	  },
+
+		// Generate SVG/PNG icons + fallback
+
+		grunticon: {
+	    icons: {
+	      files: [{
+	        expand: true,
+	        cwd: 'assets/img/icons',
+	        src: ['*.svg', '*.png'],
+	        dest: "assets/grunticon"
+	      }],
+	      options: {
+	      	cssprefix: ".icon--",
+	      	template: "assets/grunticon/css-template.hbs"
+	      }
+	    }
+    },
 
 		// Generate custom Modernizr build
 
@@ -116,8 +150,9 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default',
 		[
-			'svg2png:prod',
-			'imageoptim:prod',
+			'svgmin',
+			'grunticon',
+			//'imageoptim:prod',
 			'compass:prod',
 			'autoprefixer',
 			'modernizr',
