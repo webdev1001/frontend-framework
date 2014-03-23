@@ -18,7 +18,7 @@
 @import "normalize";					// Normalize.css
 @import "base/defaults";			// General defaults
 @import "base/project";				// Project specific defaults
-@import "base/typography";				// Project specific defaults
+@import "base/typography";		// Project specific defaults
 
 /*----------------------------------------------------------------------------------------*\
  $.Layout
@@ -32,3 +32,7 @@
 /*----------------------------------------------------------------------------------------*\
  $.Modules
 \*----------------------------------------------------------------------------------------*/
+
+.no-rgba div{
+	color: red
+}

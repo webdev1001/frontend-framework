@@ -8,6 +8,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-imageoptim');
 	grunt.loadNpmTasks('grunt-svg2png');
+	grunt.loadNpmTasks("grunt-modernizr");
  
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -17,7 +18,7 @@ module.exports = function(grunt) {
 		uglify: {
 			prod: {
 				files: {
-					'assets/js/all.min.js': ['bower_components/modernizr/modernizr.js', 'bower_components/jquery/dist/jquery.min.js', 'assets/js/_*.js']
+					'assets/js/all.min.js': ['bower_components/jquery/dist/jquery.min.js', 'assets/js/vendor/*.js', 'assets/js/_*.js']
 				}
 			}
 		},
@@ -32,6 +33,8 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+
+		// Autoprefixer
 
 		autoprefixer: {
 			options: {
@@ -66,6 +69,26 @@ module.exports = function(grunt) {
 			}
 		},
 
+		// Generate custom Modernizr build
+
+		modernizr: {
+			dist: {
+		    "devFile" : "bower_components/modernizr/modernizr.js",
+		    "outputFile" : "assets/js/vendor/modernizr.js",
+
+		    "extensibility" : {
+		        "teststyles" : true,
+		        "testprops" : true,
+		        "prefixes" : true,
+		        "domprefixes" : true
+		    },
+		    "files" : {
+        	"src": ['assets/scss/*.scss']
+        },
+		    "uglify" : false
+			}
+		},
+
 		// Watch
  
 		watch: {
@@ -96,6 +119,8 @@ module.exports = function(grunt) {
 			'svg2png:prod',
 			'imageoptim:prod',
 			'compass:prod',
+			'autoprefixer',
+			'modernizr',
 			'uglify:prod'
 		]);
  
