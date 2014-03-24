@@ -1,5 +1,7 @@
-Mixd Frontend Boilerplate
-=========================
+Mixd Frontend Framework
+=======================
+
+A front-end boilerplate for new projects at Mixd. Potentially useful for those outside Mixd too!
 
 Notes
 -----
