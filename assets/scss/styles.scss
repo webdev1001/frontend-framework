@@ -9,7 +9,7 @@
 \*----------------------------------------------------------------------------------------*/
 
 //-----------------------
-//	$.sConfiguration
+//	$.Configuration
 //-----------------------
 
 @import "config/vars";				// Global variables
@@ -32,5 +32,18 @@
 @import "layout/containers";	// Main container blocks
 
 /*----------------------------------------------------------------------------------------*\
- $.Modules
+ $.Modules / Objects
 \*----------------------------------------------------------------------------------------*/
+
+@import "modules/media";			// .media object
+@import "modules/island";			// .island object
+@import "modules/nav";				// Navigation objects
+@import "modules/inserts";		// Alerts etc.
+
+/*----------------------------------------------------------------------------------------*\
+ $.Helpers
+\*----------------------------------------------------------------------------------------*/
+
+@import "helpers/clearfix";		// Micro clearfix
+@import "helpers/debug";			// Breakpoint debugging
+@import "helpers/overrides";	// Overriding classes

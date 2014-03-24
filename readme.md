@@ -12,8 +12,7 @@ Notes
 - Uses autoprefixer
 - Generates custom modernizr build
 - Uses grunticon for icon generation
+- Uses Griddle
 
 Todo
 ----
-
-- Choose a grid system
