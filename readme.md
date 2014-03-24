@@ -11,9 +11,9 @@ Notes
 - Uses sensible long-form font stacks
 - Uses autoprefixer
 - Generates custom modernizr build
+- Uses grunticon for icon generation
 
 Todo
 ----
 
-- Grunticon
-- SVG Sprites (see Chris Coyier/css-tricks)
+- Choose a grid system

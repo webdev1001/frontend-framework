@@ -2,7 +2,7 @@
 \*----------------------------------------------------------------*/
 
 html { overflow-y: scroll; -webkit-font-smoothing: antialiased; }
-
+*{box-sizing: border-box;}
 /* -- Selections -- */
 ::-moz-selection { background: rgba(102,102,102,.5); color: #FFF; text-shadow: none; }
 ::selection { background: rgba(102,102,102,.5); color: #FFF; text-shadow: none; }

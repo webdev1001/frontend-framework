@@ -8,14 +8,19 @@
  *
 \*----------------------------------------------------------------------------------------*/
 
+//-----------------------
+//	$.sConfiguration
+//-----------------------
+
 @import "config/vars";				// Global variables
 @import "config/mixins";			// Project and third-party mixins
+@import "config/bower";				// Bower dependencies
+@import "config/grids";				// Configuration for Griddle
 
 /*----------------------------------------------------------------------------------------*\
  $.Base
 \*----------------------------------------------------------------------------------------*/
 
-@import "normalize";					// Normalize.css
 @import "base/defaults";			// General defaults
 @import "base/project";				// Project specific defaults
 @import "base/typography";		// Project specific defaults
@@ -24,15 +29,8 @@
  $.Layout
 \*----------------------------------------------------------------------------------------*/
 
-// NOTE: Grids are to be handled using Susy – mixins provided via Compass and included 
-// in config/mixins
-
 @import "layout/containers";	// Main container blocks
 
 /*----------------------------------------------------------------------------------------*\
  $.Modules
 \*----------------------------------------------------------------------------------------*/
-
-.no-rgba div{
-	color: red
-}
