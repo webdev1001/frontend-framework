@@ -14,8 +14,6 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.4)
       sass (>= 3.2, < 3.5)
-    compass-normalize (1.5)
-      compass (>= 0.12.0)
     ffi (1.9.3)
     json (1.8.1)
     listen (1.1.6)
@@ -29,14 +27,10 @@ GEM
     rb-kqueue (0.2.2)
       ffi (>= 0.5.0)
     sass (3.3.3)
-    susy (2.1.1)
-      sass (~> 3.3.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   compass (~> 1.0.0.alpha.19)
-  compass-normalize (~> 1.5)
   sass (~> 3.3)
-  susy
