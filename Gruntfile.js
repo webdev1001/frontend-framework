@@ -18,22 +18,24 @@ module.exports = function(grunt) {
 		//Uglify JS
 
 		uglify: {
-			prod: {
-				files: {
-					'assets/js/all.min.js': ['bower_components/jquery/dist/jquery.min.js', 'assets/grunticon/grunticon.loader.txt', 'assets/js/vendor/*.js', 'assets/js/_*.js']
-				}
+			files: {
+				'assets/js/all.min.js': ['bower_components/jquery/dist/jquery.min.js', 'assets/grunticon/grunticon.loader.txt', 'assets/js/vendor/*.js', 'assets/js/_*.js']
 			}
 		},
 
 		// Compile Sass
 
 		compass: {
-			prod: {
+			options: {
+				config: 'config.rb',	
+				bundleExec: true
+			},
+			dev: {
 				options: {
-					config: 'config.rb',
-					bundleExec: true
+					specify: 'assets/scss/styles.scss',
 				}
-			}
+			},
+			prod: {}
 		},
 
 		// Autoprefixer
@@ -53,11 +55,9 @@ module.exports = function(grunt) {
 		// Optimise images
 
 		imageoptim: {
-			prod: {
-				src: ['assets/img'],
-				options: {
-						quitAfter: true
-				}
+			src: ['assets/img'],
+			options: {
+					quitAfter: true
 			}
 		},
 
@@ -136,7 +136,7 @@ module.exports = function(grunt) {
 
 			css: {
 				files: 'assets/scss/**/*.scss',
-				tasks: ['compass', 'autoprefixer'],
+				tasks: ['compass:dev'],
 				options: {
 					livereload: true
 				}
@@ -152,11 +152,11 @@ module.exports = function(grunt) {
 		[
 			'svgmin',
 			'grunticon',
-			//'imageoptim:prod',
+			'imageoptim',
 			'compass:prod',
 			'autoprefixer',
 			'modernizr',
-			'uglify:prod'
+			'uglify'
 		]);
  
 }

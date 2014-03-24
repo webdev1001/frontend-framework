@@ -1,5 +1,5 @@
 /* Modernizr (Custom Build) | MIT & BSD
- * Build: http://modernizr.com/download/#-shiv-load-cssclasses-teststyles-testprops-prefixes-domprefixes-rgba
+ * Build: http://modernizr.com/download/#-shiv-load-cssclasses-teststyles-testprops-prefixes-domprefixes
  */
 ;
 
@@ -172,12 +172,7 @@ window.Modernizr = (function( window, document, undefined ) {
             }
         }
         return false;
-    }    tests['rgba'] = function() {
-        setCss('background-color:rgba(150,255,150,.5)');
-
-        return contains(mStyle.backgroundColor, 'rgba');
-    };
-
+    }
     for ( var feature in tests ) {
         if ( hasOwnProp(tests, feature) ) {
                                     featureName  = feature.toLowerCase();

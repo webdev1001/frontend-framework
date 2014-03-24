@@ -13,6 +13,7 @@ Notes
 - Generates custom modernizr build
 - Uses grunticon for icon generation
 - Uses Griddle
+- Grunt only compiles styles.scss on watch & doesn't run autoprefixer.
 
 Todo
 ----
