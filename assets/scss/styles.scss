@@ -35,10 +35,18 @@
  $.Modules / Objects
 \*----------------------------------------------------------------------------------------*/
 
+// Reusable modules and objects that contain no project-specific styling
+
 @import "modules/media";			// .media object
 @import "modules/island";			// .island object
 @import "modules/nav";				// Navigation objects
 @import "modules/inserts";		// Alerts etc.
+
+/*----------------------------------------------------------------------------------------*\
+ $. Interface
+\*----------------------------------------------------------------------------------------*/
+
+// Include your project specific partials here!
 
 /*----------------------------------------------------------------------------------------*\
  $.Helpers
