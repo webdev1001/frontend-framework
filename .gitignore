@@ -7,6 +7,7 @@ Thumbs.db
 
 # Bower
 bower_components
+components
 
 # Node
 /node_modules

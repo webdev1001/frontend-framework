@@ -11,15 +11,25 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-modernizr");
 	grunt.loadNpmTasks('grunt-svgmin');
 	grunt.loadNpmTasks('grunt-grunticon');
+
+
+	// Keep directories in variable for easy changes and CMS integration
+
+	var dirs = {
+    assets: 'assets',
+    compassConfig: 'config.rb',
+    components: 'components'
+  }
  
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		dirs: dirs,
 
 		//Uglify JS
 
 		uglify: {
 			files: {
-				'assets/js/all.min.js': ['bower_components/jquery/dist/jquery.min.js', 'assets/grunticon/grunticon.loader.txt', 'assets/js/vendor/*.js', 'assets/js/_*.js']
+				'<%= dirs.assets %>/js/all.min.js': ['<%= dirs.components %>/jquery/dist/jquery.min.js', '<%= dirs.assets %>/grunticon/grunticon.loader.txt', '<%= dirs.assets %>/js/vendor/*.js', '<%= dirs.assets %>/js/_*.js']
 			}
 		},
 
@@ -32,7 +42,7 @@ module.exports = function(grunt) {
 			},
 			dev: {
 				options: {
-					specify: 'assets/scss/styles.scss',
+					specify: '<%= dirs.assets %>/scss/styles.scss',
 				}
 			},
 			prod: {}
@@ -47,15 +57,15 @@ module.exports = function(grunt) {
 		  files: {
 	      expand: true,
 	      flatten: true,
-	      src: 'assets/css/*.css',
-	      dest: 'assets/css'
+	      src: '<%= dirs.assets %>/css/*.css',
+	      dest: '<%= dirs.assets %>/css'
 	    },
   	},
 
 		// Optimise images
 
 		imageoptim: {
-			src: ['assets/img'],
+			src: ['<%= dirs.assets %>/img'],
 			options: {
 					quitAfter: true
 			}
@@ -78,9 +88,9 @@ module.exports = function(grunt) {
 	    dist: {
 	      files: [{
 	        expand: true,
-	        cwd: 'assets/img',
+	        cwd: '<%= dirs.assets %>/img',
 	        src: ['**/*.svg'],
-	        dest: 'assets/img',
+	        dest: '<%= dirs.assets %>/img',
 	        ext: '.svg'
 	      }]
 	    }
@@ -92,13 +102,13 @@ module.exports = function(grunt) {
 	    icons: {
 	      files: [{
 	        expand: true,
-	        cwd: 'assets/img/icons',
+	        cwd: '<%= dirs.assets %>/img/icons',
 	        src: ['*.svg', '*.png'],
-	        dest: "assets/grunticon"
+	        dest: "<%= dirs.assets %>/grunticon"
 	      }],
 	      options: {
 	      	cssprefix: ".icon--",
-	      	template: "assets/grunticon/css-template.hbs"
+	      	template: "<%= dirs.assets %>/grunticon/css-template.hbs"
 	      }
 	    }
     },
@@ -107,8 +117,8 @@ module.exports = function(grunt) {
 
 		modernizr: {
 			dist: {
-		    "devFile" : "bower_components/modernizr/modernizr.js",
-		    "outputFile" : "assets/js/vendor/modernizr.js",
+		    "devFile" : "<%= dirs.components %>/modernizr/modernizr.js",
+		    "outputFile" : "<%= dirs.assets %>/js/vendor/modernizr.js",
 
 		    "extensibility" : {
 		        "teststyles" : true,
@@ -117,7 +127,7 @@ module.exports = function(grunt) {
 		        "domprefixes" : true
 		    },
 		    "files" : {
-        	"src": ['assets/scss/*.scss']
+        	"src": ['<%= dirs.assets %>/scss/*.scss']
         },
 		    "uglify" : false
 			}
@@ -127,7 +137,7 @@ module.exports = function(grunt) {
  
 		watch: {
 			scripts: {
-				files: ['assets/js/*.js'],
+				files: ['<%= dirs.assets %>/js/*.js'],
 				tasks: ['uglify'],
 				options: {
 						spawn: false,
@@ -135,7 +145,7 @@ module.exports = function(grunt) {
 			},
 
 			css: {
-				files: 'assets/scss/**/*.scss',
+				files: '<%= dirs.assets %>/scss/**/*.scss',
 				tasks: ['compass:dev'],
 				options: {
 					livereload: true
