@@ -149,6 +149,13 @@ module.exports = function(grunt) {
 				tasks: ['compass:dev'],
 				options: {
 					livereload: true
+				},
+				svg: {
+					files: '<%= dirs.assets %>/img/icons/*.svg',
+					tasks: [ 'svgmin', 'grunticon', 'compass:dev'],
+					options: {
+						livereload: true
+					}
 				}
 
 			}
