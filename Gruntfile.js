@@ -28,9 +28,12 @@ module.exports = function(grunt) {
 		//Uglify JS
 
 		uglify: {
-			files: {
-				'<%= dirs.assets %>/js/all.min.js': ['<%= dirs.components %>/jquery/dist/jquery.min.js', '<%= dirs.assets %>/grunticon/grunticon.loader.txt', '<%= dirs.assets %>/js/vendor/*.js', '<%= dirs.assets %>/js/_*.js']
+			scripts: {
+				files: {
+					'<%= dirs.assets %>/js/all.min.js': ['<%= dirs.components %>/jquery/dist/jquery.min.js', '<%= dirs.assets %>/grunticon/grunticon.loader.txt', '<%= dirs.assets %>/js/vendor/*.js', '<%= dirs.assets %>/js/_*.js']
+				}				
 			}
+
 		},
 
 		// Compile Sass
