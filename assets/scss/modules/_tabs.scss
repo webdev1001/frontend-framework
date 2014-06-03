@@ -5,6 +5,7 @@
     position: relative;
     margin: 0;
     list-style: none;
+    @extend .cf;
 }
 
 .tab__item {
