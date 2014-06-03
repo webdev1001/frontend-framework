@@ -168,7 +168,7 @@ Now that you've setup the plugin, you'll need to add the markup. Heres the basic
 </ul> <!-- .tabs -->
 ```
 
-Aslong as you keep this structure, and keep these classes, it'll work.
+Aslong as you keep this structure, and keep these classes, it'll work. The tabs are setup initially to take 4 items and when they are tabs, it'll give them a width of 25%.
 
 Its also worth mentioning that whichever tab you put the `tab__item--current` class on in the markup will be the tab which will be displayed when you load the page.
 
