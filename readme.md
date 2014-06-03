@@ -114,65 +114,12 @@ PNG fallbacks are automatically generated for incompatible browsers, and JavaScr
 
 Checks all your scripts and stylesheets for any Modernizr checks and automatically generates a Modernizr build with only the bits you actually use.
 
-
-# Documentation
-
-Here's an ongoing section of documentation on how to use the various components and quirks of the Framework.
-
-## Tabs
-
-The Front-end framework comes with a fully responsive accordion-to-tabs system which will alternate depending on screen size. For example, you'll have an accordion on mobile, whereas a tabbed system on desktop.
-
-As the tabs system won't be used on all projects, its not enabled by default.
-
-To enable the styling for the tabs, uncomment the following line within the `style.scss`
-
-```
-// @import "modules/tabs";             // tabs
-```
-
-Next, we need to initiate the function. Go into the `_main.js` file within the **assets/js** folder and add the following to the `DOMready = function () {};` function:
-
-```
-tabs();
-```
-
-Now that you've setup the plugin, you'll need to add the markup. Heres the basic structure:
-
-```
-<ul class="tabs">
-	<li class="tab__item tab__item--current">
-		<a href="#" class="tab__head">Item 1</a>
-		<div class="tab__content">
-			Content for Tab 1
-		</div>
-	</li>
-	<li class="tab__item">
-		<a href="#" class="tab__head">Item 2</a>
-		<div class="tab__content">
-			Content for Tab 2
-		</div>
-	</li>
-	<li class="tab__item">
-		<a href="#" class="tab__head">Item 3</a>
-		<div class="tab__content">
-			Content for Tab 3
-		</div>
-	</li>
-	<li class="tab__item">
-		<a href="#" class="tab__head">Item 4</a>
-		<div class="tab__content">
-			Content for Tab 4
-		</div>
-	</li>
-</ul> <!-- .tabs -->
-```
-
-Aslong as you keep this structure, and keep these classes, it'll work. The tabs are setup initially to take 4 items and when they are tabs, it'll give them a width of 25%.
-
-Its also worth mentioning that whichever tab you put the `tab__item--current` class on in the markup will be the tab which will be displayed when you load the page.
-
 # TODO
 
 - Fully document Sass coding practices and conventions
 - Abstract Sass modules into separate custom bower component
+
+#Documentation
+
+Full documentation for the various coponents within this Framework can be found in the wiki for the Repository. 
+
