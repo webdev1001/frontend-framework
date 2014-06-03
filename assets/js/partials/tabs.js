@@ -12,6 +12,6 @@ var tabs = function() {
         }
         e.preventDefault();
     });
-}
+};
 
 // To call this, use 'tabs();' in the '_main.js' file
