@@ -3,8 +3,7 @@ Mixd Frontend Framework
 
 A front-end boilerplate for new projects at Mixd.
 
-General
--------
+# General
 
 The Mixd Frontend Framework...
 
@@ -15,8 +14,7 @@ The Mixd Frontend Framework...
 - Uses Grunt to concat/compile/uglify/build etc.
 - Uses Bower to handle front end dependencies
 
-Getting started
----------------
+# Getting started
 
 ### Install dependencies
 
@@ -30,8 +28,7 @@ $ bower install
 
 Open both `package.json` and `bower.json` and change the name of the project.
 
-Sass usage
-----------
+## Sass usage
 
 ### Structure
 
@@ -60,8 +57,7 @@ A sensible place to start would be `styles.scss`, where you can see what partial
 Get started by importing your project-specific partials under the "Project" comment flag.
 
 
-JavaScript usage
-----------------
+# JavaScript usage
 
 Where possible, all Javascript should be concatenated and uglified into `all.min.js`. Your Grunt build will automatically concatenate in the following order:
 
@@ -76,8 +72,7 @@ If you need to add new third party components, they should be added via Bower an
 
 **Note:** Modernizr is a bit of a special case in that it *is* a third party component, but *isn't* included via Bower. That's because Grunt creates a custom modernizr build on the fly – more on that later.
 
-Bower usage
-----------
+## Bower usage
 
 Front-end dependencies should be handled via Bower, where possible. To add a new dependency:
 
@@ -89,8 +84,7 @@ $ bower install --save <dependency>
 
 The `--save` parameter is important here, as this saves the component to your `bower.json` so other developers can easily run `bower install` to fetch the correct versions of every component.
 
-Grunt tasks
------------
+## Grunt tasks
 
 The Grunt `watch` task concats/uglifies your scripts when you Javascript files change, and compiles your stylesheets when your Sass files change. There are also a number of other important tasks which can either be ran directly or by running the default `grunt` task.
 
@@ -120,8 +114,65 @@ PNG fallbacks are automatically generated for incompatible browsers, and JavaScr
 
 Checks all your scripts and stylesheets for any Modernizr checks and automatically generates a Modernizr build with only the bits you actually use.
 
-TODO
------
+
+# Documentation
+
+Here's an ongoing section of documentation on how to use the various components and quirks of the Framework.
+
+## Tabs
+
+The Front-end framework comes with a fully responsive accordion-to-tabs system which will alternate depending on screen size. For example, you'll have an accordion on mobile, whereas a tabbed system on desktop.
+
+As the tabs system won't be used on all projects, its not enabled by default.
+
+To enable the styling for the tabs, uncomment the following line within the `style.scss`
+
+```
+// @import "modules/tabs";             // tabs
+```
+
+Next, we need to initiate the function. Go into the `_main.js` file within the **assets/js** folder and add the following to the `DOMready = function () {};` function:
+
+```
+tabs();
+```
+
+Now that you've setup the plugin, you'll need to add the markup. Heres the basic structure:
+
+```
+<ul class="tabs">
+	<li class="tab__item tab__item--current">
+		<a href="#" class="tab__head">Item 1</a>
+		<div class="tab__content">
+			Content for Tab 1
+		</div>
+	</li>
+	<li class="tab__item">
+		<a href="#" class="tab__head">Item 2</a>
+		<div class="tab__content">
+			Content for Tab 2
+		</div>
+	</li>
+	<li class="tab__item">
+		<a href="#" class="tab__head">Item 3</a>
+		<div class="tab__content">
+			Content for Tab 3
+		</div>
+	</li>
+	<li class="tab__item">
+		<a href="#" class="tab__head">Item 4</a>
+		<div class="tab__content">
+			Content for Tab 4
+		</div>
+	</li>
+</ul> <!-- .tabs -->
+```
+
+Aslong as you keep this structure, and keep these classes, it'll work.
+
+Its also worth mentioning that whichever tab you put the `tab__item--current` class on in the markup will be the tab which will be displayed when you load the page.
+
+# TODO
 
 - Fully document Sass coding practices and conventions
 - Abstract Sass modules into separate custom bower component
