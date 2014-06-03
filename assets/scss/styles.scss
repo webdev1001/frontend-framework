@@ -35,12 +35,13 @@
  $.Modules / Objects
 \*----------------------------------------------------------------------------------------*/
 
-// Reusable modules and objects that contain no project-specific styling
+// Reusable modules and objects that contain no project-specific styling. Uncomment as necessary.
 
 @import "modules/media";			// .media object
 @import "modules/island";			// .island object
 @import "modules/nav";				// Navigation objects
-@import "modules/inserts";		// Alerts etc.
+@import "modules/inserts";		    // Alerts etc.
+// @import "modules/tabs";             // tabs
 
 /*----------------------------------------------------------------------------------------*\
  $. Interface
