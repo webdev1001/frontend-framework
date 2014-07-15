@@ -40,22 +40,19 @@ module.exports = function( grunt ) {
 
         // Compile Sass/Scss 
         sass: {
+            options: {
+                style: 'compressed'
+            },
             dev: {
-                options: { 
-                    style: 'compressed'
-                },
                 files: {
                     '<%= dirs.assets %>/css/styles.css': '<%= dirs.assets %>/scss/styles.scss'
                 }
             },
             prod: {
-                options: { 
-                    style: 'compressed'
-                },
                 files: {
                     '<%= dirs.assets %>/css/*.css': '<%= dirs.assets %>/scss/*.scss'
                 }
-            },
+            }
         },
 
         // Autoprefix .css files
