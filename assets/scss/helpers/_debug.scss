@@ -3,35 +3,39 @@
 
 // Shows current breakpoint indicator for development purposes. 
 
-@mixin debug-message{
-		display:inline-block;
-		color:#FFF;
-		position: fixed;
-		z-index: 50;
-		top:1em;
-		right:1em;
-		background-color:rgba(255,255,255,0.1);
-		padding:.35em;
-		font-family: $font-sans;
-		text-transform:uppercase;
-		font-size:.8em;
-	}
+@mixin debug-message {
+    display: inline-block;
+    color: #FFF;
+    position: fixed;
+    z-index: 50;
+    top: 1em;
+    right: 1em;
+    background-color: rgba(255,255,255,0.1);
+    padding: .35em;
+    font-family: $font-sans;
+    text-transform: uppercase;
+    font-size: .8em;
+}
 
-//New breakpoints will need a new @include adding here.
+// New breakpoints will need a new @include adding here.
+body.debug {
+    &:before {
+        @include debug-message; content: "Breakpoint 0"
+    }
 
-body.debug{
-	&:before{@include debug-message; content: "Breakpoint 0"}
+    @include respond-min($bp1) {
+        &:before{ @include debug-message; content: "Breakpoint 1" }
+    }
 
-	@include respond-min($bp1) {
-		&:before{@include debug-message; content: "Breakpoint 1"}
-	}
-	@include respond-min($bp2) {
-		&:before{@include debug-message; content: "Breakpoint 2"}
-	}	
-	@include respond-min($bp3) {
-		&:before{@include debug-message; content: "Breakpoint 3"}
-	}	
-	@include respond-min($bp4) {
-		&:before{@include debug-message; content: "Breakpoint 4"}
-	}
+    @include respond-min($bp2) {
+        &:before{ @include debug-message; content: "Breakpoint 2" }
+    }
+
+    @include respond-min($bp3) {
+        &:before{ @include debug-message; content: "Breakpoint 3" }
+    }
+
+    @include respond-min($bp4) {
+        &:before{ @include debug-message; content: "Breakpoint 4" }
+    }
 }

@@ -2,11 +2,12 @@
 \*----------------------------------------------------------------*/
 
 html { overflow-y: scroll; -webkit-font-smoothing: antialiased; }
-*{box-sizing: border-box;}
+*{ box-sizing: border-box; }
+
 /* -- Selections -- */
-::-moz-selection { background: rgba(102,102,102,.5); color: #FFF; text-shadow: none; }
-::selection { background: rgba(102,102,102,.5); color: #FFF; text-shadow: none; }
-a:link { -webkit-tap-highlight-color: rgba(102,102,102,.5); }
+::-moz-selection { background: rgba(102, 102, 102, .5); color: #FFF; text-shadow: none; }
+::selection { background: rgba(102, 102, 102, .5); color: #FFF; text-shadow: none; }
+a:link { -webkit-tap-highlight-color: rgba(102, 102, 102, .5); }
 
 /* -- Text-Level -- */
 hr { display: block; clear: both; height: 1px; border: 0; padding: 0; }
@@ -42,4 +43,4 @@ form ul, form ol { list-style: none; margin-left: 0; margin-bottom: 1em; }
 form li { margin-bottom: .5em; }
 form li:last-child, fieldset:last-child { margin-bottom: 0; }
 form br { display: none; }
-textarea { resize: vertical; } 
+textarea { resize: vertical; }
