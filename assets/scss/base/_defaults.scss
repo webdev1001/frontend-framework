@@ -1,40 +1,53 @@
+/**
+ * Title: Defaults
+ * Description: These are the base default styles for the project
+ *
+ * Sections:
+ *
+ *    $. General Defaults
+ *    $. Selections
+ *    $. Text Level
+ *    $. Embedded
+ *    $. Tables
+ *    $. Forms
+ */
+
 /* $. General Defaults
 \*----------------------------------------------------------------*/
 
-html {
-    overflow-y: scroll;
-}
+html { overflow-y: scroll; }
+* { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
 
-* {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-}
-
-/* -- Selections -- */
+/* $. Selections
+\*----------------------------------------------------------------*/
 ::-moz-selection { background: rgba(102, 102, 102, .5); color: #FFF; text-shadow: none; }
 ::selection { background: rgba(102, 102, 102, .5); color: #FFF; text-shadow: none; }
 a:link { -webkit-tap-highlight-color: rgba(102, 102, 102, .5); }
 
-/* -- Text-Level -- */
+/* $. Text Level
+\*----------------------------------------------------------------*/
 hr { display: block; clear: both; height: 1px; border: 0; padding: 0; }
 ins { background: #ff9; color: #000; text-decoration: none; }
 mark { font-style: italic; font-weight: bold; }
 pre { overflow-x: auto; }
 address { white-space: pre-line; }
 
-/* -- Embedded -- */
+/* $. Embedded
+\*----------------------------------------------------------------*/
 img { display: block; margin: 0 auto; font-style: italic; color: #666; vertical-align: middle; }
 img[width] { width: auto !important; }
 img[height] { height: auto !important; }
 img, audio, canvas, embed, object, video { max-width: 100%; }
 iframe { display: block; }
 
-/* -- Tables -- */
+/* $. Tables
+\*----------------------------------------------------------------*/
 table { width: 100%; }
 td { vertical-align: top; }
 th, caption { text-align: left; }
 
-/* -- Forms -- */
+/* $. Forms
+\*----------------------------------------------------------------*/
 form { margin: 0; }
 fieldset { border: 0; margin: 0; padding: 0; }
 label, select { cursor: pointer; }
