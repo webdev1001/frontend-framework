@@ -1,14 +1,14 @@
-module.exports = function(grunt) {
+module.exports = function( grunt ) {
 
     // Load NPM tasks
-    grunt.loadNpmTasks( 'grunt-contrib-compass' );
-    grunt.loadNpmTasks( 'grunt-autoprefixer' );
     grunt.loadNpmTasks( 'grunt-contrib-watch' );
+    grunt.loadNpmTasks( 'grunt-contrib-sass' );
     grunt.loadNpmTasks( 'grunt-contrib-uglify' );
-    grunt.loadNpmTasks( 'grunt-imageoptim' );
-    grunt.loadNpmTasks( 'grunt-svg2png' );
+    grunt.loadNpmTasks( 'grunt-autoprefixer' );
     grunt.loadNpmTasks( "grunt-modernizr" );
+    grunt.loadNpmTasks( 'grunt-imageoptim' );
     grunt.loadNpmTasks( 'grunt-svgmin' );
+    grunt.loadNpmTasks( 'grunt-svg2png' );
     grunt.loadNpmTasks( 'grunt-grunticon' );
 
 
@@ -39,17 +39,23 @@ module.exports = function(grunt) {
         },
 
         // Compile Sass/Scss 
-        compass: {
-            options: {
-                config: 'config.rb',
-                bundleExec: true
-            },
+        sass: {
             dev: {
-                options: {
-                    specify: '<%= dirs.assets %>/scss/styles.scss',
+                options: { 
+                    style: 'compressed'
+                },
+                files: {
+                    '<%= dirs.assets %>/css/styles.css': '<%= dirs.assets %>/scss/styles.scss'
                 }
             },
-            prod: {}
+            prod: {
+                options: { 
+                    style: 'compressed'
+                },
+                files: {
+                    '<%= dirs.assets %>/css/*.css': '<%= dirs.assets %>/scss/*.scss'
+                }
+            },
         },
 
         // Autoprefix .css files
@@ -146,7 +152,7 @@ module.exports = function(grunt) {
             },
             css: {
                 files: '<%= dirs.assets %>/scss/**/*.scss',
-                tasks: [ 'compass:dev' ],
+                tasks: [ 'sass:dev' ],
                 options: {
                     livereload: true
                 },
@@ -168,7 +174,7 @@ module.exports = function(grunt) {
             'svgmin',
             'grunticon',
             'imageoptim',
-            'compass:prod',
+            'sass:prod',
             'autoprefixer',
             'modernizr',
             'uglify'

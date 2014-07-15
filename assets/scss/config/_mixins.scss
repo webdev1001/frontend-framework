@@ -1,3 +1,5 @@
-@import "compass";                      // Compass core (http://compass-style.org/reference/compass/)
-@import "mixins/media-queries";         // Jake Archibald's sass-ie (https://github.com/jakearchibald/sass-ie)
-@import "mixins/typography";            // Typography and vertical rhythm mixins
+// Jake Archibald's sass-ie (https://github.com/jakearchibald/sass-ie)
+@import "mixins/media-queries";
+
+// Typography and vertical rhythm mixins
+@import "mixins/typography";
