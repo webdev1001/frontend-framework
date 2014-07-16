@@ -38,10 +38,11 @@ module.exports = function( grunt ) {
             }
         },
 
-        // Compile Sass/Scss 
+        // Compile Sass/Scss
         sass: {
             options: {
-                style: 'compressed'
+                style: 'compressed',
+                bundleExec: true
             },
             dev: {
                 files: {
@@ -49,9 +50,13 @@ module.exports = function( grunt ) {
                 }
             },
             prod: {
-                files: {
-                    '<%= dirs.assets %>/css/*.css': '<%= dirs.assets %>/scss/*.scss'
-                }
+                files: [{
+                  expand: true,
+                  cwd: '<%= dirs.assets %>/scss/',
+                  src: ['*.scss'],
+                  dest: '<%= dirs.assets %>/css/',
+                  ext: '.css'
+                }]
             }
         },
 
@@ -86,7 +91,7 @@ module.exports = function( grunt ) {
                     {
                         removeUselessStrokeAndFill: false
                     },
-                    { 
+                    {
                         convertPathData: {
                             straightCurves: false
                         }

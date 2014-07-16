@@ -4,7 +4,6 @@ Thumbs.db
 
 # Sass/css
 .sass-cache
-assets/css/*.css
 
 # Bower
 bower_components
