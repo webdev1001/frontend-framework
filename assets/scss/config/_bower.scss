@@ -1,2 +1,36 @@
+/**
+ * Title: Bower Components
+ * Description: Importing and using the bower components
+ * Sections:
+ *    $. Imports
+ *    $. Grid Build
+ */
+
+
+/* $. Imports
+\*----------------------------------------------------------------*/
 @import "../../components/normalize-scss/normalize.scss";
 @import "../../components/griddle/griddle.scss";
+
+
+/* $. Griddle Build
+\*----------------------------------------------------------------*/
+@include griddle-build(2);
+
+@include respond-min($bp1) {
+    @include griddle-build(2 3, "--bp1");
+}
+@include respond-min($bp2) {
+    @include griddle-build(2 3 4, "--bp2");
+}
+@include respond-min($bp3) {
+    @include griddle-build(2 3 4 5 6 12, "--bp3");
+}
+@include respond-min($bp4) {
+    @include griddle-build(2 3 4 5 6 12, "--bp4");
+}
+
+// Fix Griddle spaceing issue in Safari latest. Delete when fixed.
+.grid {
+    letter-spacing: -0.32em;
+}

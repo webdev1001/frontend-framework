@@ -1,15 +1,14 @@
 /**
  * Title: Project
  * Description: These are project specific base styles
- *
  * Sections:
- *
  *    $. Project Defaults
  *    $. Lists
  *    $. Tables
  *    $. Forms
  *    $. Links
  */
+
 
 /* $. Project Defaults
 \*----------------------------------------------------------------*/
@@ -27,6 +26,7 @@ body {
     background-color: $color-background;
 }
 
+
 /* $. Lists
 \*----------------------------------------------------------------*/
 ul, ol { margin-left: 2em; padding-left: 0; }
@@ -35,6 +35,7 @@ li ul, li ol { margin-top: $baseline / 2; margin-bottom: 0; }
 dt { font-weight: bold; }
 dd { margin-left: 0; margin-bottom: $baseline / 2; font-style: italic; }
 
+
 /* $. Tables
 \*----------------------------------------------------------------*/
 caption { padding-bottom: .5em; font-style: italic; }
@@ -42,9 +43,14 @@ th, td { padding: .25em .5em; border: 1px solid $color-keyline; }
 tr:nth-child(odd) td { background-color: #F6F6F6; }
 th, legend { font-weight: bold; background: $color-comp; }
 
+
 /* $. Forms
 \*----------------------------------------------------------------*/
-label { display: block; padding-bottom: .25em; font-weight: bold; }
+label {
+    display: block;
+    padding-bottom: .25em;
+    font-weight: bold;
+}
 
 input,
 select,
@@ -65,6 +71,7 @@ input[type=submit] {
     color: #FFF;
     background-color: $color-comp;
 }
+
 
 /* $. Links
 \*----------------------------------------------------------------*/

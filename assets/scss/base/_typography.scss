@@ -1,14 +1,24 @@
-/* $. Typography and vertical rhythm
-\*----------------------------------------------------------------*/
+/**
+ * Title: Typography
+ * Description: Base typography styles dealing with Vertical Rhythm and Hierarchy
+ * Sections:
+ *    $. Vertical Rhythm
+ *    $. Headings and Common Styles
+ *    $. Blockquotes
+ */
 
-/* -- Vertical Rhythm -- */
+
+/* $. Vertical Rhythm
+\*----------------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6 { margin-bottom: .65em; margin-top: $baseline;  line-height: 1; }
 h1, blockquote, pre, p, ul, ol, dl, hr { margin-top: 0; }
 p, ul, ol, dl, hr, form, table, blockquote, pre { margin-bottom: $baseline; }
 hr { border-top: 1px solid $color-keyline; }
 blockquote > :last-child, ul > :last-child, ol > :last-child, dl > :last-child { margin-bottom: 0; }
 
-/* -- Headings -- */
+
+/* $. Headings and Common Styles
+\*----------------------------------------------------------------*/
 h1, .alpha { @include font-size(36); }
 h2, .beta {  @include font-size(30); }
 h3, .gamma { @include font-size(24); }
@@ -16,24 +26,41 @@ h4, .delta { @include font-size(20); }
 h5, .epsilon { @include font-size(16); }
 h6, .zeta { @include font-size(14); }
 
-/* -- Blockquotes -- */
+.intro { font-size: 1.25em; }
+.headline { border-bottom: 1px solid $color-keyline; padding-bottom: .45em; }
+
+
+/* $. Blockquotes
+\*----------------------------------------------------------------*/
 blockquote {
+    clear: both;
     margin-left: 0;
     margin-right: 0;
+    font-family: $font-serif;
+    font-style: italic;
 
     @include respond-min($bp2) {
         padding-left: 2em;
         padding-right: 2em;
     }
+
+    p {
+        font-size: 1.35em;
+    }
+
+    p + .source {
+        margin-top: -$baseline;
+    }
 }
 
-blockquote { font-family: $font-serif; font-style: italic; clear: both; }
-blockquote p { font-size: 1.35em; }
-blockquote p + .source { margin-top: -$baseline; }
-.source { display: block; font-family: $font-sans; font-size: 1em; font-weight: bold; font-style: normal; }
-.source:before { content:"\2013\0020"; }
+.source {
+    display: block;
+    font-family: $font-sans;
+    font-size: 1em;
+    font-weight: bold;
+    font-style: normal;
 
-/* -- Common text patterns -- */
-
-.intro { font-size: 1.25em; }
-.headline { border-bottom: 1px solid $color-keyline; padding-bottom: .45em; }
+    &:before {
+        content:"\2013\0020";
+    }
+}

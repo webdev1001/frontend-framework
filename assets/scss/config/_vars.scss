@@ -1,22 +1,40 @@
-// Major Breakpoints
+/**
+ * Title: Variables
+ * Description: Project Variables go here
+ * Sections:
+ *    $. Breakpoints
+ *    $. Colours
+ *    $. Typography
+ *    $. Layout
+ */
+
+
+/* $. Breakpoints
+\*----------------------------------------------------------------*/
 $bp1: 30em;
 $bp2: 48em;
 $bp3: 62em;
 $bp4: 78em;
 
-// Colours
+
+/* $. Colours
+\*----------------------------------------------------------------*/
 $color-text: #222;
 $color-brand: #663399;
 $color-comp: #CDCCB7;
 $color-background: #EEE;
 $color-keyline: #CCC;
 
-// Typography
+
+/* $. Typography
+\*----------------------------------------------------------------*/
 $baseline: 1.5rem;
 $font-sans: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 $font-serif: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 
-// Layout
+
+/* $. layout
+\*----------------------------------------------------------------*/
 $container-max-width: 68.5em;
 $media-img-gutter: 2em;
 $island-padding: 1.5em;
