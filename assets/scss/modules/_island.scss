@@ -1,13 +1,16 @@
 /* $. Island Object - http://goo.gl/1XYHG
 \*----------------------------------------------------------------*/
-.island {
-	padding: $island-padding;
-	background-color:$color-comp;
-	margin-bottom:1em;
 
-	> :last-child {
-		margin-bottom: 0; }
+.island {
+    padding: $island-padding;
+    background-color: $color-comp;
+    margin-bottom: 1em;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
 }
 
 .islet {
-	padding: $islet-padding; }
+    padding: $islet-padding;
+}

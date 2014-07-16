@@ -1,64 +1,93 @@
+/**
+ * Title: Project
+ * Description: These are project specific base styles
+ * Sections:
+ *    $. Project Defaults
+ *    $. Lists
+ *    $. Tables
+ *    $. Forms
+ *    $. Links
+ */
+
+
 /* $. Project Defaults
 \*----------------------------------------------------------------*/
 html {
-	font-family: $font-sans;
-	line-height: 1.5;
-	font-size: 100%; // 16px
-	@include respond-min($bp3){
-		font-size: 112.5%; // 18px
-	}
+    font-family: $font-sans;
+    line-height: 1.5;
+    font-size: 100%; // 16px
+    @include respond-min($bp3) {
+        font-size: 112.5%; // 18px
+    }
 }
 
 body {
-	color: $color-text;
-	background-color: $color-background; }
+    color: $color-text;
+    background-color: $color-background;
+}
 
-/* -- Lists -- */
+
+/* $. Lists
+\*----------------------------------------------------------------*/
 ul, ol { margin-left: 2em; padding-left: 0; }
 li { margin-bottom: .5em; }
 li ul, li ol { margin-top: $baseline / 2; margin-bottom: 0; }
 dt { font-weight: bold; }
 dd { margin-left: 0; margin-bottom: $baseline / 2; font-style: italic; }
 
-/* -- Tables -- */
+
+/* $. Tables
+\*----------------------------------------------------------------*/
 caption { padding-bottom: .5em; font-style: italic; }
 th, td { padding: .25em .5em; border: 1px solid $color-keyline; }
 tr:nth-child(odd) td { background-color: #F6F6F6; }
-th, legend { font-weight: bold; background: $color-comp; }	
+th, legend { font-weight: bold; background: $color-comp; }
 
-/* -- Forms -- */
-label { display: block; padding-bottom: .25em; font-weight: bold; }
+
+/* $. Forms
+\*----------------------------------------------------------------*/
+label {
+    display: block;
+    padding-bottom: .25em;
+    font-weight: bold;
+}
 
 input,
 select,
 textarea {
-	padding: .5em;
-	border: 1px solid;
-	color: #666;
-	background-color: #FFF;
-	border-color: #666 #CCC #CCC #666; }
+    padding: .5em;
+    border: 1px solid;
+    color: #666;
+    background-color: #FFF;
+    border-color: #666 #CCC #CCC #666;
+}
 
 button,
 .btn:link,
 input[type=submit] {
-	display: inline-block;
-	padding: .5em 1em;
-	border: 0;
-	color: #FFF;
-	background-color: $color-comp; }
+    display: inline-block;
+    padding: .5em 1em;
+    border: 0;
+    color: #FFF;
+    background-color: $color-comp;
+}
 
-/* -- Links -- */
+
+/* $. Links
+\*----------------------------------------------------------------*/
 a {
-	text-decoration: none;
-	color: $color-brand; }
+    text-decoration: none;
+    color: $color-brand;
 
-/* -- visited -- */
-a:visited {
-	color: $color-brand; }
+    &:hover, &:focus {
+        color: lighten($color-brand, 10%);
+    }
+
+    &:visited {
+        color: $color-brand;
+    }
+}
 
 .btn:visited {
-	@extend .btn; }
-
-/* -- hovers -- */
-a:hover {
-	color: lighten($color-brand, 10%); }
+    @extend .btn;
+}
