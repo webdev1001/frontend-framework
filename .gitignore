@@ -9,9 +9,6 @@ Thumbs.db
 bower_components
 components
 
-# Grunt
-grunticon
-
 # Node
 /node_modules
 /npm-debug.log

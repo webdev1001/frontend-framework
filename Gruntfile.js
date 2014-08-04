@@ -41,15 +41,17 @@ module.exports = function( grunt ) {
         // Compile Sass/Scss
         sass: {
             options: {
-                style: 'compressed',
                 bundleExec: true
             },
             dev: {
                 files: {
                     '<%= dirs.assets %>/css/styles.css': '<%= dirs.assets %>/scss/styles.scss'
-                }
+                },
+                options: {
+                    style: 'nested',
+                },
             },
-            prod: {
+            dist: {
                 files: [{
                   expand: true,
                   cwd: '<%= dirs.assets %>/scss/',
@@ -63,7 +65,7 @@ module.exports = function( grunt ) {
         // Autoprefix .css files
         autoprefixer: {
             options: {
-                browsers: [ 'last 2 version', 'ie 8', 'ie 9', 'Firefox ESR', 'Opera 12.1' ]
+                browsers: [ 'last 2 versions', 'ie 8', 'ie 9', 'Firefox ESR', 'Opera 12.1' ]
             },
             files: {
                 expand: true,
@@ -119,8 +121,7 @@ module.exports = function( grunt ) {
                     dest: "<%= dirs.assets %>/grunticon"
                 }],
                 options: {
-                    cssprefix: ".icon--",
-                    template: "<%= dirs.assets %>/grunticon/css-template.hbs"
+                    cssprefix: ".icon--"
                 }
             }
         },
@@ -158,12 +159,12 @@ module.exports = function( grunt ) {
                 options: {
                     livereload: true
                 },
-                svg: {
-                    files: '<%= dirs.assets %>/img/icons/*.svg',
-                    tasks: [ 'svgmin', 'grunticon', 'compass:dev' ],
-                    options: {
-                        livereload: true
-                    }
+            },
+            svg: {
+                files: '<%= dirs.assets %>/img/icons/*.svg',
+                tasks: [ 'svgmin', 'grunticon', 'sass:dev' ],
+                options: {
+                    livereload: true
                 }
             }
         }
@@ -176,7 +177,7 @@ module.exports = function( grunt ) {
             'svgmin',
             'grunticon',
             'imageoptim',
-            'sass:prod',
+            'sass:dist',
             'autoprefixer',
             'modernizr',
             'uglify'
