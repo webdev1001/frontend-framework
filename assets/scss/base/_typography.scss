@@ -8,8 +8,10 @@
  */
 
 
+
 /* $. Vertical Rhythm
 \*----------------------------------------------------------------*/
+
 h1, h2, h3, h4, h5, h6 { margin-bottom: .65em; margin-top: $baseline;  line-height: 1; }
 h1, blockquote, pre, p, ul, ol, dl, hr { margin-top: 0; }
 p, ul, ol, dl, hr, form, table, blockquote, pre { margin-bottom: $baseline; }
@@ -17,8 +19,10 @@ hr { border-top: 1px solid $color-keyline; }
 blockquote > :last-child, ul > :last-child, ol > :last-child, dl > :last-child { margin-bottom: 0; }
 
 
+
 /* $. Headings and Common Styles
 \*----------------------------------------------------------------*/
+
 h1, .alpha { font-size: 2.25rem; }
 h2, .beta {  font-size: 1.875rem; }
 h3, .gamma { font-size: 1.5rem; }
@@ -30,8 +34,10 @@ h6, .zeta { font-size: 0.875rem; }
 .headline { border-bottom: 1px solid $color-keyline; padding-bottom: .45em; }
 
 
+
 /* $. Blockquotes
 \*----------------------------------------------------------------*/
+
 blockquote {
     clear: both;
     margin-left: 0;

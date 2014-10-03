@@ -1,55 +1,66 @@
+/**
+ * Title:
+ *    Main Stylesheet
+ * Description:
+ *    This is the main Scss file which will import all partials and
+ *    compile into: assets/css/styles.css
+ * Sections:
+ *    $. Config
+ *    $. Base
+ *    $. Layout
+ *    $. Modules
+ *    $. Interface
+ *    $. Helpers
+ */
+
+
+
+/* $. Config
+\*----------------------------------------------------------------*/
+
 @charset "UTF-8";
-/*----------------------------------------------------------------------------------------*\
- * Mixd Front-end Framework
- *
- * Author   : Mixd
- * Website  : http://mixd.co.uk
- * GitHub   : http://github.com/Mixd/Mixd-CSS-Framework
- *
-\*----------------------------------------------------------------------------------------*/
+@import "config/vars";
+@import "config/mixins";
+@import "config/bower";
 
-/*----------------------------------------------------------------------------------------*\
- $.Configuration
-\*----------------------------------------------------------------------------------------*/
 
-@import "config/vars";              // Global variables
-@import "config/mixins";            // Project and third-party mixins
-@import "config/bower";             // Bower Components & Grid
 
-/*----------------------------------------------------------------------------------------*\
- $.Base
-\*----------------------------------------------------------------------------------------*/
+/* $. Base
+\*----------------------------------------------------------------*/
 
-@import "base/defaults";            // General defaults
-@import "base/project";             // Project specific defaults
-@import "base/typography";          // Typographic defaults and settings
+@import "base/defaults";
+@import "base/project";
+@import "base/typography";
 
-/*----------------------------------------------------------------------------------------*\
- $.Layout
-\*----------------------------------------------------------------------------------------*/
 
-@import "layout/containers";        // Main container blocks
 
-/*----------------------------------------------------------------------------------------*\
- $.Modules / Objects
-\*----------------------------------------------------------------------------------------*/
+/* $. Layout
+\*----------------------------------------------------------------*/
 
-// Reusable modules and objects that contain no project-specific styling. Uncomment as necessary.
-@import "modules/media";            // .media object
-@import "modules/island";           // .island object
-@import "modules/nav";              // Navigation objects
-@import "modules/inserts";          // Alerts etc.
+@import "layout/containers";
 
-/*----------------------------------------------------------------------------------------*\
- $. Interface
-\*----------------------------------------------------------------------------------------*/
+
+
+/* $. Modules
+\*----------------------------------------------------------------*/
+
+@import "modules/media";
+@import "modules/island";
+@import "modules/nav";
+@import "modules/inserts";
+
+
+
+/* $. Interface
+\*----------------------------------------------------------------*/
 
 // Include your project specific partials here!
 
-/*----------------------------------------------------------------------------------------*\
- $.Helpers
-\*----------------------------------------------------------------------------------------*/
 
-@import "helpers/clearfix";         // Micro clearfix
-@import "helpers/debug";            // Breakpoint debugging
-@import "helpers/overrides";        // Overriding classes
+
+/* $. Helpers
+\*----------------------------------------------------------------*/
+
+@import "helpers/clearfix";
+@import "helpers/debug";
+@import "helpers/overrides";

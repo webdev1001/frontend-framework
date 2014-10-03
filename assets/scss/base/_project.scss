@@ -10,8 +10,10 @@
  */
 
 
+
 /* $. Project Defaults
 \*----------------------------------------------------------------*/
+
 html {
     font-family: $font-sans;
     line-height: 1.5;
@@ -27,8 +29,10 @@ body {
 }
 
 
+
 /* $. Lists
 \*----------------------------------------------------------------*/
+
 ul, ol { margin-left: 2em; padding-left: 0; }
 li { margin-bottom: .5em; }
 li ul, li ol { margin-top: $baseline / 2; margin-bottom: 0; }
@@ -36,16 +40,20 @@ dt { font-weight: bold; }
 dd { margin-left: 0; margin-bottom: $baseline / 2; font-style: italic; }
 
 
+
 /* $. Tables
 \*----------------------------------------------------------------*/
+
 caption { padding-bottom: .5em; font-style: italic; }
 th, td { padding: .25em .5em; border: 1px solid $color-keyline; }
 tr:nth-child(odd) td { background-color: #F6F6F6; }
 th, legend { font-weight: bold; background: $color-comp; }
 
 
+
 /* $. Forms
 \*----------------------------------------------------------------*/
+
 label {
     display: block;
     padding-bottom: .25em;
@@ -73,8 +81,10 @@ input[type=submit] {
 }
 
 
+
 /* $. Links
 \*----------------------------------------------------------------*/
+
 a {
     text-decoration: none;
     color: $color-brand;

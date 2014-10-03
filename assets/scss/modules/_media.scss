@@ -2,8 +2,8 @@
 \*----------------------------------------------------------------*/
 
 .media {
-    margin-bottom: $baseline;
     @extend .cf;
+    margin-bottom: $baseline;
 }
 
 .media__img img,

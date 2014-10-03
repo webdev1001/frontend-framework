@@ -1,41 +1,63 @@
-/* $. Debuggin'
+/**
+ * Title:
+ *    Debugging
+ * Description:
+ *    helper class to show which breakpoint you're currently on
+ * Sections:
+ *    $. Mixin
+ *    $. Class
+ */
+
+
+/* $. Mixin
 \*----------------------------------------------------------------*/
 
-// Shows current breakpoint indicator for development purposes. 
-
 @mixin debug-message {
-    display: inline-block;
-    color: #FFF;
     position: fixed;
     z-index: 50;
-    top: 1em;
     right: 1em;
-    background-color: rgba(255,255,255,0.1);
+    bottom: 1em;
+    display: inline-block;
     padding: .35em;
     font-family: $font-sans;
-    text-transform: uppercase;
     font-size: .8em;
+    text-transform: uppercase;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, .75);
 }
 
-// New breakpoints will need a new @include adding here.
+
+
+/* $. Class
+\*----------------------------------------------------------------*/
+
 body.debug {
     &:before {
-        @include debug-message; content: "Breakpoint 0"
+        @include debug-message;
+        content: "Breakpoint 0";
     }
 
     @include respond-min($bp1) {
-        &:before{ @include debug-message; content: "Breakpoint 1" }
+        &:before {
+            content: "Breakpoint 1"
+        }
     }
 
     @include respond-min($bp2) {
-        &:before{ @include debug-message; content: "Breakpoint 2" }
+        &:before {
+            content: "Breakpoint 2"
+        }
     }
 
     @include respond-min($bp3) {
-        &:before{ @include debug-message; content: "Breakpoint 3" }
+        &:before {
+            content: "Breakpoint 3"
+        }
     }
 
     @include respond-min($bp4) {
-        &:before{ @include debug-message; content: "Breakpoint 4" }
+        &:before {
+            content: "Breakpoint 4"
+        }
     }
 }
