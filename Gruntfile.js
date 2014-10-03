@@ -50,8 +50,8 @@ module.exports = function( grunt ) {
                     '<%= dirs.assets %>/css/styles.css': '<%= dirs.assets %>/scss/styles.scss'
                 },
                 options: {
-                    style: 'nested',
-                },
+                    style: 'nested'
+                }
             },
             dist: {
                 files: [{
@@ -74,7 +74,7 @@ module.exports = function( grunt ) {
                 flatten: true,
                 src: '<%= dirs.assets %>/css/*.css',
                 dest: '<%= dirs.assets %>/css'
-            },
+            }
         },
 
         // Optimise Images
@@ -185,5 +185,4 @@ module.exports = function( grunt ) {
             'uglify'
         ]
     );
-
 }
