@@ -43,7 +43,8 @@ module.exports = function( grunt ) {
         // Compile Sass/Scss
         sass: {
             options: {
-                bundleExec: true
+                bundleExec: true,
+                style: 'compressed'
             },
             dev: {
                 files: {
@@ -79,7 +80,7 @@ module.exports = function( grunt ) {
 
         // Optimise Images
         imageoptim: {
-            src: [ '<%= dirs.assets %>/img' ],
+            src: '<%= dirs.assets %>/img',
             options: {
                 quitAfter: true
             }
@@ -157,10 +158,10 @@ module.exports = function( grunt ) {
             },
             css: {
                 files: '<%= dirs.assets %>/scss/**/*.scss',
-                tasks: [ 'sass:dev', 'autoprefixer' ],
+                tasks: [ 'sass:dev' ],
                 options: {
                     livereload: true
-                },
+                }
             },
             svg: {
                 files: '<%= dirs.assets %>/img/icons/*.svg',
