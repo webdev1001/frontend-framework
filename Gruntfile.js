@@ -157,7 +157,7 @@ module.exports = function( grunt ) {
             },
             css: {
                 files: '<%= dirs.assets %>/scss/**/*.scss',
-                tasks: [ 'sass:dev' ],
+                tasks: [ 'sass:dev', 'autoprefixer' ],
                 options: {
                     livereload: true
                 },
