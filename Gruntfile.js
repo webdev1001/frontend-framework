@@ -4,8 +4,9 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-contrib-watch' );
     grunt.loadNpmTasks( 'grunt-contrib-sass' );
     grunt.loadNpmTasks( 'grunt-contrib-uglify' );
+    grunt.loadNpmTasks( 'grunt-remfallback' );
     grunt.loadNpmTasks( 'grunt-autoprefixer' );
-    grunt.loadNpmTasks( "grunt-modernizr" );
+    grunt.loadNpmTasks( 'grunt-modernizr' );
     grunt.loadNpmTasks( 'grunt-imageoptim' );
     grunt.loadNpmTasks( 'grunt-svgmin' );
     grunt.loadNpmTasks( 'grunt-svg2png' );
@@ -62,6 +63,19 @@ module.exports = function( grunt ) {
                   dest: '<%= dirs.assets %>/css/',
                   ext: '.css'
                 }]
+            }
+        },
+
+        remfallback: {
+            options: {
+                log: false,
+                replace: false
+            },
+            dist: {
+                files: {
+                    '<%= dirs.assets %>/css/styles.css': ['<%= dirs.assets %>/css/styles.css'],
+                    '<%= dirs.assets %>/css/ie.css': ['<%= dirs.assets %>/css/ie.css']
+                }
             }
         },
 
@@ -181,6 +195,7 @@ module.exports = function( grunt ) {
             'grunticon',
             'imageoptim',
             'sass:dist',
+            'remfallback',
             'autoprefixer',
             'modernizr',
             'uglify'
