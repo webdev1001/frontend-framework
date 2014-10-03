@@ -1,0 +1,129 @@
+/**
+ * Title:
+ *    Elements
+ * Description:
+ *    The styling of basic element tags
+ * Sections:
+ *    $. Basics
+ *    $. Links
+ *    $. Blockquotes
+ *    $. Embedded
+ */
+
+
+
+/* $. Basics
+\*----------------------------------------------------------------*/
+
+hr {
+    clear: both;
+    display: block;
+    height: 1px;
+    padding: 0;
+    border: 0;
+}
+
+ins {
+    text-decoration: none;
+    color: #000;
+    background: #ff9;
+}
+
+mark {
+    font-style: italic;
+    font-weight: bold;
+}
+
+pre {
+    overflow-x: auto;
+}
+
+address {
+    white-space: pre-line;
+}
+
+
+
+/* $. Links
+\*----------------------------------------------------------------*/
+
+a {
+    text-decoration: none;
+    color: $color-brand;
+
+    &:hover, &:focus {
+        color: lighten($color-brand, 10%);
+    }
+}
+
+
+
+/* $. Blockquotes
+\*----------------------------------------------------------------*/
+
+blockquote {
+    clear: both;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: $font-serif;
+    font-style: italic;
+
+    @include respond-min($bp2) {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    p {
+        font-size: 1.35em;
+    }
+
+    p + .source {
+        margin-top: -$baseline;
+    }
+}
+
+.source {
+    display: block;
+    font-family: $font-sans;
+    font-size: 1em;
+    font-weight: bold;
+    font-style: normal;
+
+    &:before {
+        content:"\2013\0020";
+    }
+}
+
+
+
+/* $. Embedded
+\*----------------------------------------------------------------*/
+
+img {
+    display: inline-block;
+    margin: 0 auto;
+    font-style: italic;
+    color: #666;
+    vertical-align: middle;
+}
+
+img[width] {
+    width: auto !important;
+}
+
+img[height] {
+    height: auto !important;
+}
+
+img,
+audio,
+canvas,
+embed,
+object,
+video {
+    max-width: 100%;
+}
+
+iframe {
+    display: block;
+}

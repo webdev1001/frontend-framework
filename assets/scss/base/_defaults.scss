@@ -1,80 +1,58 @@
 /**
- * Title: Defaults
- * Description: These are the base default styles for the project
+ * Title:
+ *    Defaults
+ * Description:
+ *    These are the base styles for the project
  * Sections:
- *    $. General Defaults
+ *    $. Defaults
  *    $. Selections
- *    $. Text Level
- *    $. Embedded
- *    $. Tables
- *    $. Forms
  */
 
 
 
-/* $. General Defaults
+/* $. Defaults
 \*----------------------------------------------------------------*/
 
-html { overflow-y: scroll; }
-* { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+}
 
+html {
+    font-family: $font-sans;
+    line-height: 1.5;
+    font-size: 100%; // 16px
+    overflow-y: scroll;
+    box-sizing: border-box;
+
+    @include respond-min($bp3) {
+        font-size: 112.5%; // 18px
+    }
+}
+
+body {
+    color: $color-text;
+    background-color: $color-background;
+}
 
 
 /* $. Selections
 \*----------------------------------------------------------------*/
 
-::-moz-selection { background: rgba(102, 102, 102, .5); color: #FFF; text-shadow: none; }
-::selection { background: rgba(102, 102, 102, .5); color: #FFF; text-shadow: none; }
-a:link { -webkit-tap-highlight-color: rgba(102, 102, 102, .5); }
+::-moz-selection,
+::selection {
+    background: rgba(102, 102, 102, .5);
+    color: #FFF;
+    text-shadow: none;
+}
 
+a:link {
+    -webkit-tap-highlight-color: rgba(102, 102, 102, .5);
+}
 
-
-/* $. Text Level
-\*----------------------------------------------------------------*/
-
-hr { display: block; clear: both; height: 1px; border: 0; padding: 0; }
-ins { background: #ff9; color: #000; text-decoration: none; }
-mark { font-style: italic; font-weight: bold; }
-pre { overflow-x: auto; }
-address { white-space: pre-line; }
-
-
-
-/* $. Embedded
-\*----------------------------------------------------------------*/
-
-img { display: block; margin: 0 auto; font-style: italic; color: #666; vertical-align: middle; }
-img[width] { width: auto !important; }
-img[height] { height: auto !important; }
-img, audio, canvas, embed, object, video { max-width: 100%; }
-iframe { display: block; }
-
-
-
-/* $. Tables
-\*----------------------------------------------------------------*/
-
-table { width: 100%; }
-td { vertical-align: top; }
-th, caption { text-align: left; }
-
-
-
-/* $. Forms
-\*----------------------------------------------------------------*/
-
-form { margin: 0; }
-fieldset { border: 0; margin: 0; padding: 0; }
-label, select { cursor: pointer; }
-legend { padding: .3em .6em; *margin-left: -7px; }
-button, input { line-height: normal; }
-input, input[type=search], select, textarea { width: 100%; }
-button, html input[type=button], input[type=reset], input[type=submit] { width: auto; }
-input[type=file] { width: auto; border: 0; padding: 0; }
-input[type=checkbox], input[type=radio] { vertical-align: baseline; background: none; border: none; height: .8em; width: .8em; }
-
-form ul, form ol { list-style: none; margin-left: 0; margin-bottom: 1em; }
-form li { margin-bottom: .5em; }
-form li:last-child, fieldset:last-child { margin-bottom: 0; }
-form br { display: none; }
-textarea { resize: vertical; }
+:focus {
+    outline: 0;
+    box-shadow: 0 0 1px $color-blue;
+}
