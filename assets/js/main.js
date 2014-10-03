@@ -6,7 +6,7 @@ MAIN = (function($) {
     },
     DOMready = function() {
         // Code here runs when the DOM is ready
-
+        
     };
 
     return {
