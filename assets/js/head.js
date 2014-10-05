@@ -1,6 +1,6 @@
 /**
  * Title:
- *    Header Javascript File
+ *    Header Javascript
  * Description:
  *    Javascript file which is located in the <head>.
  *    Only to be used for scripts that are needed to be

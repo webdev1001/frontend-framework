@@ -1,6 +1,6 @@
 /**
  * Title:
- *    Main Javascript File
+ *    Main Javascript
  * Description:
  *    The main Javascript file where you will write the bulk
  *    of your scripts. Make sure to include this just before
