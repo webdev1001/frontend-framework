@@ -28,12 +28,3 @@
     <script src="assets/js/min/head.min.js"></script>
 </head>
 <body class="debug">
-
-<div class="container">
-    <h1>Hello World</h1>
-    <p>Welcome to the Mixd Front-end Framework.</p>
-</div>
-
-<script src="assets/js/min/main.min.js"></script>
-</body>
-</html>
