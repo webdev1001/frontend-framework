@@ -16,11 +16,8 @@
 \*----------------------------------------------------------------*/
 
 hr {
-    clear: both;
-    display: block;
-    height: 1px;
-    padding: 0;
     border: 0;
+    border-top: 1px solid $color-keyline;
 }
 
 ins {
@@ -76,22 +73,6 @@ blockquote {
     p {
         font-size: 1.35em;
     }
-
-    p + .source {
-        margin-top: -$baseline;
-    }
-}
-
-.source {
-    display: block;
-    font-family: $font-sans;
-    font-size: 1em;
-    font-weight: bold;
-    font-style: normal;
-
-    &:before {
-        content:"\2013\0020";
-    }
 }
 
 
@@ -105,14 +86,14 @@ img {
     font-style: italic;
     color: #666;
     vertical-align: middle;
-}
 
-img[width] {
-    width: auto !important;
-}
+    &[width] {
+        width: auto !important;
+    }
 
-img[height] {
-    height: auto !important;
+    &[height] {
+        height: auto !important;
+    }
 }
 
 img,
