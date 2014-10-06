@@ -20,7 +20,7 @@
     <!--<![endif]-->
 
     <!--[if lte IE 8]>
-        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/ie.css" media="screen">
+        <link rel="stylesheet" href="assets/css/ie.css" media="screen">
     <![endif]-->
 
     <noscript><link href="assets/grunticon/icons.fallback.css" rel="stylesheet"></noscript>
