@@ -16,7 +16,6 @@ module.exports = function( grunt ) {
     // Keep directories in variable for easy changes and CMS integration
     var dirs = {
         assets: 'assets',
-        compassConfig: 'config.rb',
         components: 'components'
     }
 
