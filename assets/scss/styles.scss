@@ -15,7 +15,7 @@
 
 
 
-/* $. Config
+/* $. Config - Variables, global mixins & Bower components
 \*----------------------------------------------------------------*/
 
 @charset "UTF-8";
@@ -25,42 +25,45 @@
 
 
 
-/* $. Base
+/* $. Base - Project defaults & Element styling
 \*----------------------------------------------------------------*/
 
 @import "base/defaults";
-@import "base/project";
+@import "base/elements";
 @import "base/typography";
+@import "base/lists";
+@import "base/forms";
+@import "base/tables";
 
 
 
-/* $. Layout
-\*----------------------------------------------------------------*/
-
-@import "layout/containers";
-
-
-
-/* $. Modules
+/* $. Modules - Global objects i.e. .btn, .island, etc
 \*----------------------------------------------------------------*/
 
 @import "modules/media";
 @import "modules/island";
 @import "modules/nav";
-@import "modules/inserts";
+@import "modules/notifications";
 
 
 
-/* $. Interface
+/* $. Interface - Project specific objects i.e. .work, .product, etc
 \*----------------------------------------------------------------*/
 
 // Include your project specific partials here!
 
 
 
-/* $. Helpers
+/* $. Layout - Page based layouts i.e. .header, .page-86, etc
 \*----------------------------------------------------------------*/
 
-@import "helpers/clearfix";
-@import "helpers/debug";
+@import "layout/containers";
+
+
+
+/* $. Helpers - i.e. Clearfixes, accessbility hidden, etc
+\*----------------------------------------------------------------*/
+
+@import "helpers/extras";
 @import "helpers/overrides";
+@import "helpers/debug";
