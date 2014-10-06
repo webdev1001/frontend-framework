@@ -819,8 +819,8 @@ address {
 a {
   text-decoration: none;
   color: #663399; }
-  a:hover, a:focus {
-    color: #7f40bf; }
+  a[href]:hover {
+    color: #4c2673; }
 
 /* $. Blockquotes
 \*----------------------------------------------------------------*/

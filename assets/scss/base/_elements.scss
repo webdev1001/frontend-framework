@@ -48,8 +48,8 @@ a {
     text-decoration: none;
     color: $color-brand;
 
-    &:hover, &:focus {
-        color: lighten($color-brand, 10%);
+    &[href]:hover {
+        color: darken($color-brand, 10%);
     }
 }
 
