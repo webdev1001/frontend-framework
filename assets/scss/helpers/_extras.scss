@@ -13,7 +13,7 @@
 /* $. Clearfix - http://goo.gl/5Fvrh
 \*----------------------------------------------------------------*/
 
-.cf {
+%cf, .cf {
     &:after {
         content: "";
         display: table;

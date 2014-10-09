@@ -44,6 +44,51 @@
 }
 </code></pre>
 
+    <form action="">
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <ul>
+                <li>
+                    <label for="form-name">Name:</label>
+                    <input type="text" name="form-name" id="form-name" placeholder="i.e. John Doe" required>
+                </li>
+
+                <li>
+                    <label for="form-email">Email:</label>
+                    <input type="email" name="form-email" id="form-email" placeholder="i.e. example@example.com" required>
+                </li>
+
+                <li>
+                    <label for="form-tel">Telephone:</label>
+                    <input type="tel" name="form-tel" id="form-tel" placeholder="i.e. 01423 598008">
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>More Information</legend>
+
+            <ul>
+                <li>
+                    <label for="form-how">Message:</label>
+                    <select name="form-how" id="form-how">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </li>
+
+                <li>
+                    <label for="form-message">Message:</label>
+                    <textarea name="form-message" id="form-message" placeholder="i.e. John Doe" required></textarea>
+                </li>
+            </ul>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+
 </div>
 
 <?php include('includes/footer.php'); ?>
