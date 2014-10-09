@@ -9,7 +9,6 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-modernizr' );
     grunt.loadNpmTasks( 'grunt-imageoptim' );
     grunt.loadNpmTasks( 'grunt-svgmin' );
-    grunt.loadNpmTasks( 'grunt-svg2png' );
     grunt.loadNpmTasks( 'grunt-grunticon' );
 
 
