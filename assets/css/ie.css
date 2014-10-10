@@ -413,14 +413,12 @@ body {
   background-color: #EEE;
 }
 
-::-moz-selection,
 ::-moz-selection {
   background: rgba(102,102,102,0.5);
   color: #FFF;
   text-shadow: none;
 }
 
-::-moz-selection,
 ::selection {
   background: rgba(102,102,102,0.5);
   color: #FFF;
@@ -624,56 +622,27 @@ dd {
 }
 
 form {
-  margin: 0;
+  margin: 0 0 1em 0;
 }
 
 fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
+  margin-bottom: 2em;
+  padding: 0 1em;
 }
 
-label,
-select {
-  cursor: pointer;
+fieldset:last-child {
+  margin-top: 0;
 }
 
 legend {
-  padding: 0;
-  *margin-left: -7px;
+  font-size: 1.25em;
+  margin-bottom: 1em;
+  padding: 0 1em;
 }
 
-button,
-input {
-  line-height: normal;
-}
-
-input,
-input[type=search],
-select,
-textarea {
-  width: 100%;
-  border-radius: 0;
-}
-
-button,
-html input[type=button],
-input[type=reset],
-input[type=submit] {
-  width: auto;
-}
-
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
-input[type=file] {
-  width: auto;
-  border: 0;
-  padding: 0;
+label {
+  display: block;
+  padding-bottom: .25em;
 }
 
 input[type=checkbox],
@@ -683,6 +652,22 @@ input[type=radio] {
   border: none;
   height: .8em;
   width: .8em;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: .5em;
+  border: 1px solid;
+  border-radius: 0;
+  color: #666;
+  background-color: #FFF;
+  border-color: #CCC;
+}
+
+textarea {
+  resize: vertical;
 }
 
 form ul,
@@ -701,28 +686,20 @@ fieldset:last-child {
   margin-bottom: 0;
 }
 
-form br {
-  display: none;
+::-webkit-input-placeholder {
+  font-style: italic;
 }
 
-textarea {
-  resize: vertical;
+:-moz-placeholder {
+  font-style: italic;
 }
 
-label {
-  display: block;
-  padding-bottom: .25em;
-  font-weight: bold;
+::-moz-placeholder {
+  font-style: italic;
 }
 
-input,
-select,
-textarea {
-  padding: .5em;
-  border: 1px solid;
-  color: #666;
-  background-color: #FFF;
-  border-color: #666 #CCC #CCC #666;
+:-ms-input-placeholder {
+  font-style: italic;
 }
 
 table {
@@ -753,8 +730,7 @@ tr:nth-child(odd) td {
   background-color: #F6F6F6;
 }
 
-th,
-legend {
+th {
   font-weight: bold;
   background: #CDCCB7;
 }
@@ -816,6 +792,7 @@ img.media__img {
   width: 85%;
 }
 
+form:after,
 .cf:after,
 .media:after,
 .nav:after {
