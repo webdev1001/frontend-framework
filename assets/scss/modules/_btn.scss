@@ -18,8 +18,6 @@
     display: inline-block;
     padding: $baseline/2 $baseline;
     border: 0;
-    color: $color-text;
-    background: $color-brand;
     transition: background .15s ease-out;
 }
 
@@ -40,7 +38,8 @@
 \*----------------------------------------------------------------*/
 
 button,
-input[type=submit],
+input[type="button"],
+input[type="submit"],
 .btn {
     @extend %btn;
 }
@@ -50,8 +49,9 @@ input[type=submit],
 /* $. Modifications
 \*----------------------------------------------------------------*/
 
-.btn--primary {}
-.btn--secondary {}
+.btn--primary {
+    @include btn(#fff, $color-brand);
+}
 
+.btn--secondary {}
 .btn--large {}
-.btn--small {}

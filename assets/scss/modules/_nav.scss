@@ -1,6 +1,34 @@
-/* $. Navigation objects
+/**
+ * Title:
+ *    Navigation Module
+ * Description:
+ *    The .nav module and its extensions
+ * Sections:
+ *    $. Setup
+ *    $. Component
+ *    $. Modifications
+ */
+
+
+
+/* $. Setup
+\*----------------------------------------------------------------*/
+
+// Any setup goes here
+
+
+
+/* $. Component
 \*----------------------------------------------------------------*/
 
 .nav {
-    @extend .cf, .list--unset;
+    @extend %cf, .list--unset;
 }
+
+
+
+/* $. Modifications
+\*----------------------------------------------------------------*/
+
+.nav--primary {}
+.nav--secondary {}

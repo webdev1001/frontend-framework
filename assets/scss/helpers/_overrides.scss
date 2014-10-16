@@ -7,7 +7,6 @@
  * Sections:
  *    $. Box Model
  *    $. Lists
- *    $. Fonts
  */
 
 
@@ -29,12 +28,3 @@
 .list--unset { list-style: none !important; margin-left: 0 !important; }
 .list--numbers { list-style: decimal !important; }
 .list--bullets { list-style: disc !important; }
-
-
-
-/* $. Fonts
-\*----------------------------------------------------------------*/
-
-.weight--light { font-weight:300 !important; }
-.weight--normal { font-weight:400 !important; }
-.weight--semibold { font-weight:600 !important; }
