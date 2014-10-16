@@ -22,19 +22,19 @@
 /* $. Griddle Build
 \*----------------------------------------------------------------*/
 
-@include griddle-build(2);
+@include griddle-build(12);
 
 @include respond-min($bp1) {
-    @include griddle-build(2 3, "--bp1");
+    @include griddle-build(12, "--bp1");
 }
 @include respond-min($bp2) {
-    @include griddle-build(2 3 4, "--bp2");
+    @include griddle-build(12, "--bp2");
 }
 @include respond-min($bp3) {
-    @include griddle-build(2 3 4 5 6 12, "--bp3");
+    @include griddle-build(12 5, "--bp3");
 }
 @include respond-min($bp4) {
-    @include griddle-build(2 3 4 5 6 12, "--bp4");
+    @include griddle-build(12 5, "--bp4");
 }
 
 

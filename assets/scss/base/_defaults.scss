@@ -34,7 +34,7 @@ html {
 
 body {
     color: $color-text;
-    background-color: $color-background;
+    background-color: $color-bg;
 }
 
 
@@ -59,5 +59,5 @@ a:link {
 
 :focus {
     outline: 0;
-    box-shadow: 0 0 1px $color-keyline;
+    box-shadow: 0 0 1px darken($color-bg, 10%);
 }
