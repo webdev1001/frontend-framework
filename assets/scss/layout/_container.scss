@@ -4,7 +4,7 @@
 .container {
     margin: 0 auto;
     width: 92.5%;
-    max-width: $container-max-width;
+    max-width: 68.5em; // 1233px 
 
     @include respond-min($bp1) {
         width: 85%;
