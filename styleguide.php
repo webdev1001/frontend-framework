@@ -144,9 +144,10 @@
             </ul>
         </fieldset>
 
-        <fieldset>
-            <legend>More Information</legend>
+        <button type="submit">Submit</button>
+    </form>
 
+    <form action="">
             <ul>
                 <li>
                     <label for="form-how">Message:</label>
@@ -162,7 +163,6 @@
                     <textarea name="form-message" id="form-message" placeholder="i.e. John Doe" required></textarea>
                 </li>
             </ul>
-        </fieldset>
 
         <button type="submit">Submit</button>
     </form>

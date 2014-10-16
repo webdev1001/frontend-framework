@@ -17,11 +17,11 @@
 
 form {
     @extend %cf;
-    margin: 0 0 $baseline 0;
+    margin: 0 0 $baseline*1.5 0;
 }
 
 fieldset {
-    margin-bottom: 2em;
+    margin-bottom: $baseline*1.5;
     padding: 0 1em;
 
     &:last-child {
