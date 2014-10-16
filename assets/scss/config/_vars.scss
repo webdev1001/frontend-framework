@@ -8,6 +8,7 @@
  *    $. Colours
  *    $. Typography
  *    $. Layout
+ *    $. Z axis
  */
 
 
@@ -44,3 +45,14 @@ $font-serif: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book An
 \*----------------------------------------------------------------*/
 
 $baseline: 1em;
+
+
+
+/* $. Z axis
+\*----------------------------------------------------------------*/
+
+$z-index-1: 1;
+$z-index-2: 10;
+$z-index-3: 100;
+$z-index-4: 1000;
+$z-index-5: 10000;
