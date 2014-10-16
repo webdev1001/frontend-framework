@@ -16,7 +16,7 @@
 
 %island {
     padding: $baseline*1.5;
-    margin-bottom: 1em;
+    margin-bottom: $baseline;
 
     > :last-child {
         margin-bottom: 0;
