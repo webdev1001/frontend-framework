@@ -14,6 +14,12 @@
 
     <h6>Heading Level 6</h6>
 
+    <p class="breadcrumbs">
+        <a href="#">Home</a> &gt; 
+        <a href="#">About</a> &gt; 
+        <span>Our Team</span>
+    </p>
+
     <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et <a>malesuada fames ac turpis</a> egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. <del>Quisque sittw amet</del><ins>Quisque sit amet</ins> est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
 
     <figure class="media">
