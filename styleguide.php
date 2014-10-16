@@ -36,6 +36,58 @@
 
     <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. <del>Quisque sittw amet</del><ins>Quisque sit amet</ins> est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
 
+    <table>
+        <caption>An Example Table</caption>
+        <thead>
+            <tr>
+                <th>
+                    Heading 1
+                </th>
+                <th>
+                    Heading 2
+                </th>
+                <th>
+                    Heading 3
+                </th>
+                <th>
+                    Heading 4
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+            </tr>
+        </tbody>
+    </table>
+
     <p><a href="#" class="btn btn--primary">Send message</a></p>
 
     <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. <del>Quisque sittw amet</del><ins>Quisque sit amet</ins> est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>

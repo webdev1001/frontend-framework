@@ -1,8 +1,26 @@
 /* $. Lists
 \*----------------------------------------------------------------*/
 
-ul, ol { margin-left: 2em; padding-left: 0; }
-li { margin-bottom: .5em; }
-li ul, li ol { margin-top: $baseline / 2; margin-bottom: 0; }
-dt { font-weight: bold; }
-dd { margin-left: 0; margin-bottom: $baseline / 2; font-style: italic; }
+ul, ol {
+    margin-left: 2em;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: .5em;
+}
+
+li ul, li ol {
+    margin-top: $baseline/2;
+    margin-bottom: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0;
+    margin-bottom: $baseline/2;
+    font-style: italic;
+}

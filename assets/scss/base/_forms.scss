@@ -17,7 +17,7 @@
 
 form {
     @extend %cf;
-    margin: 0 0 1em 0;
+    margin: 0 0 $baseline 0;
 }
 
 fieldset {
@@ -31,13 +31,13 @@ fieldset {
 
 legend {
     font-size: 1.25em;
-    margin-bottom: 1em;
+    margin-bottom: $baseline;
     padding: 0 1em;
 }
 
 label {
     display: block;
-    padding-bottom: .25em;
+    padding-bottom: $baseline/4;
 }
 
 input[type=checkbox],
@@ -69,11 +69,11 @@ form ul,
 form ol {
     list-style: none;
     margin-left: 0;
-    margin-bottom: 1em;
+    margin-bottom: $baseline;
 }
 
 form li {
-    margin-bottom: .5em;
+    margin-bottom: $baseline/2;
 }
 
 form li:last-child,

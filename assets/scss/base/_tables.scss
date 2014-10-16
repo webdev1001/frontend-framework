@@ -1,19 +1,42 @@
-/* $. Tables
+/**
+ * Title:
+ *    Tables
+ * Description:
+ *    Styling of tables and their variations
+ * Sections:
+ *    $. Basics
+ *    $. Your Styles
+ */
+
+
+
+/* $. Basics
 \*----------------------------------------------------------------*/
 
 table {
     width: 100%;
 }
 
-td {
+td, th, caption {
+    padding: .5em;
+    border: 1px solid darken($color-bg, 10%);
     vertical-align: top;
 }
 
-th, caption {
-    text-align: left;
+tr:nth-child(odd) td {
+    background: darken($color-bg, 5%);
 }
 
-caption { padding-bottom: .5em; font-style: italic; }
-th, td { padding: .25em .5em; border: 1px solid darken($color-bg, 10%) }
-tr:nth-child(odd) td { background-color: #F6F6F6; }
-th { font-weight: bold; background: $color-brand; }
+th, caption {
+    font-weight: bold;
+    background: darken($color-bg, 10%);
+}
+
+
+
+/* $. Your Styles
+\*----------------------------------------------------------------*/
+
+.table--hovered tr:hover td {
+    background: darken($color-bg, 7.5%);
+}
