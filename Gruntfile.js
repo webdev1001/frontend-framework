@@ -4,7 +4,7 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-contrib-watch' );
     grunt.loadNpmTasks( 'grunt-contrib-sass' );
     grunt.loadNpmTasks( 'grunt-contrib-uglify' );
-    grunt.loadNpmTasks( 'grunt-remfallback' );
+    grunt.loadNpmTasks( 'grunt-pixrem' );
     grunt.loadNpmTasks( 'grunt-autoprefixer' );
     grunt.loadNpmTasks( 'grunt-modernizr' );
     grunt.loadNpmTasks( 'grunt-imageoptim' );
@@ -48,9 +48,6 @@ module.exports = function( grunt ) {
             dev: {
                 files: {
                     '<%= dirs.assets %>/css/styles.css': '<%= dirs.assets %>/scss/styles.scss'
-                },
-                options: {
-                    style: 'compressed'
                 }
             },
             dist: {
@@ -64,16 +61,17 @@ module.exports = function( grunt ) {
             }
         },
 
-        remfallback: {
+        pixrem: {
             options: {
-                log: false,
-                replace: false
+                rootvalue: '1em'
             },
             dist: {
-                files: {
-                    '<%= dirs.assets %>/css/styles.css': ['<%= dirs.assets %>/css/styles.css'],
-                    '<%= dirs.assets %>/css/ie.css': ['<%= dirs.assets %>/css/ie.css']
-                }
+                src: '<%= dirs.assets %>/css/styles.css',
+                dest: '<%= dirs.assets %>/css/styles.css'
+            },
+            legacy: {
+                src: '<%= dirs.assets %>/css/ie.css',
+                dest: '<%= dirs.assets %>/css/ie.css'
             }
         },
 
@@ -193,7 +191,8 @@ module.exports = function( grunt ) {
             'grunticon',
             'imageoptim',
             'sass:dist',
-            'remfallback',
+            'pixrem:dist',
+            'pixrem:legacy',
             'autoprefixer',
             'modernizr',
             'uglify'
