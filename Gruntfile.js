@@ -61,17 +61,16 @@ module.exports = function( grunt ) {
             }
         },
 
+        // Fallback for rem's
         pixrem: {
             options: {
                 rootvalue: '1em'
             },
             dist: {
-                src: '<%= dirs.assets %>/css/styles.css',
-                dest: '<%= dirs.assets %>/css/styles.css'
-            },
-            legacy: {
-                src: '<%= dirs.assets %>/css/ie.css',
-                dest: '<%= dirs.assets %>/css/ie.css'
+                files: {
+                    '<%= dirs.assets %>/css/styles.css': ['<%= dirs.assets %>/css/styles.css'],
+                    '<%= dirs.assets %>/css/ie.css': ['<%= dirs.assets %>/css/ie.css'],
+                }
             }
         },
 
@@ -192,7 +191,6 @@ module.exports = function( grunt ) {
             'imageoptim',
             'sass:dist',
             'pixrem:dist',
-            'pixrem:legacy',
             'autoprefixer',
             'modernizr',
             'uglify'
