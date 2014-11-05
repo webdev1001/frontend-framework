@@ -60,4 +60,10 @@ body.debug {
             content: "Breakpoint 4"
         }
     }
+
+    @include respond-min($bp5) {
+        &:before {
+            content: "Breakpoint 5"
+        }
+    }
 }
