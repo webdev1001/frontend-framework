@@ -1,10 +1,27 @@
+/**
+ * Title:
+ *    IE Stylesheet
+ * Description:
+ *    IE only stylesheet to be used for IE8 and below and will
+ *    compile into: assets/css/styles.css
+ * Sections:
+ *    $. Setup
+ *    $. Styles
+ */
+
+
+
+/* $. Setup
+\*----------------------------------------------------------------*/
+
 $old-ie: true;
 $mqs-up-to: 65em;
 @import "styles";
 
-/*----------------------------------------------------------------------------------------*\
- $.IE SPECIFIC STYLES
-\*----------------------------------------------------------------------------------------*/
+
+
+/* $. Styles
+\*----------------------------------------------------------------*/
 
 .lt-ie9 .container {
     width: 960px;

@@ -1,17 +1,22 @@
 /**
- * Title: Mixins
- * Description: Use this file to import all global mixins
+ * Title:
+ *    Global Mixins
+ * Description:
+ *    This is an archive for all global mixins located within the
+ *    'mixins' folder
  * Sections:
- *    $. Jake Archibald's sass-ie
- *    $. Typography
+ *    $. Media Queries
+ *    $. Your new mixins
  */
 
 
-/* $. Jake Archibald's sass-ie (https://github.com/jakearchibald/sass-ie)
+
+/* $. Media Queries - https://github.com/jakearchibald/sass-ie
 \*----------------------------------------------------------------*/
+
 @import "mixins/media-queries";
 
 
-/* $. Typography and vertical rhythm mixins
+
+/* $. Your new mixins
 \*----------------------------------------------------------------*/
-@import "mixins/typography";

@@ -1,0 +1,30 @@
+/**
+ * Title:
+ *    Containers
+ * Description:
+ *    Container based layout modules
+ * Sections:
+ *    $. Containers
+ *    $. Your Styles
+ */
+
+
+
+/* $. Containers
+\*----------------------------------------------------------------*/
+
+.container {
+    margin: 0 auto;
+    width: 92.5%;
+    min-width: 15em; // 240px
+    max-width: 68.5em; // 1233px 
+
+    @include respond-min($bp1) {
+        width: 85%;
+    }
+}
+
+
+
+/* $. Your Styles
+\*----------------------------------------------------------------*/

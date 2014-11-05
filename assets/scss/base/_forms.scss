@@ -1,0 +1,100 @@
+/**
+ * Title:
+ *    Forms
+ * Description:
+ *    Styling of forms and form variations
+ * Sections:
+ *    $. Basics
+ *    $. Placeholders
+ */
+
+
+
+/* $. Basics
+\*----------------------------------------------------------------*/
+
+form {
+    @extend %cf;
+    margin: 0 0 $baseline*1.5 0;
+}
+
+fieldset {
+    margin-bottom: $baseline*1.5;
+    padding: 0 1em;
+
+    &:last-child {
+        margin-top: 0;
+    }
+}
+
+legend {
+    font-size: 1.25em;
+    margin-bottom: $baseline;
+    padding: 0 1em;
+}
+
+label {
+    display: block;
+    padding-bottom: $baseline/4;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    vertical-align: baseline;
+    background: none;
+    border: none;
+    height: .8em;
+    width: .8em;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: .5em;
+    border: 1px solid;
+    border-radius: 0;
+    color: #666;
+    background-color: #FFF;
+    border-color: #CCC;
+}
+
+textarea {
+    resize: vertical;
+}
+
+form ul,
+form ol {
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: $baseline;
+}
+
+form li {
+    margin-bottom: $baseline/2;
+}
+
+form li:last-child,
+fieldset:last-child {
+    margin-bottom: 0;
+}
+
+
+/* $. Placeholders
+\*----------------------------------------------------------------*/
+
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+
+:-moz-placeholder {
+   font-style: italic;
+}
+
+::-moz-placeholder {
+   font-style: italic;
+}
+
+:-ms-input-placeholder {
+   font-style: italic;
+}

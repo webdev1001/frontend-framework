@@ -1,0 +1,47 @@
+/**
+ * Title:
+ *    Breadcrumbs
+ * Description:
+ *    The .breadcrumbs module and its extensions
+ * Sections:
+ *    $. Setup
+ *    $. Component
+ *    $. Modifications
+ */
+
+
+
+/* $. Setup
+\*----------------------------------------------------------------*/
+
+// Setup here
+
+
+
+/* $. Component
+\*----------------------------------------------------------------*/
+
+.breadcrumbs {
+    margin-bottom: 1em;
+    font-size: .75rem;
+    text-align: center;
+
+    @include respond-min($bp3) {
+        text-align: left;
+    }
+
+    a {
+        color: $color-brand;
+        border-bottom: 1px solid transparent;
+
+        &:hover, &:focus {
+            border-bottom: 1px solid $color-brand; // fallback
+            border-bottom: 1px solid rgba($color-brand, .5);
+        }
+    }
+}
+
+
+
+/* $. Modifications
+\*----------------------------------------------------------------*/

@@ -1,0 +1,43 @@
+/**
+ * Title:
+ *    Lists
+ * Description:
+ *    Styling of <ul>, <ol>, <dl> and its children
+ * Sections:
+ *    $. Basics
+ *    $. Your Styles
+ */
+
+
+
+/* $. Lists
+\*----------------------------------------------------------------*/
+
+ul, ol {
+    margin-left: 2em;
+    padding-left: 0;
+
+    ul, ol {
+        margin-top: $baseline/2;
+        margin-bottom: 0;
+    }
+}
+
+li {
+    margin-bottom: .5em;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0;
+    margin-bottom: $baseline/2;
+    font-style: italic;
+}
+
+
+
+/* $. Your Styles
+\*----------------------------------------------------------------*/

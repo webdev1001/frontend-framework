@@ -1,41 +1,58 @@
 /**
- * Title: Variables
- * Description: Project Variables go here
+ * Title:
+ *    Variables
+ * Description:
+ *    Project variables go here
  * Sections:
  *    $. Breakpoints
  *    $. Colours
  *    $. Typography
  *    $. Layout
+ *    $. Z axis
  */
+
 
 
 /* $. Breakpoints
 \*----------------------------------------------------------------*/
+
 $bp1: 30em;
 $bp2: 48em;
 $bp3: 62em;
 $bp4: 78em;
+$bp5: 87em;
+
 
 
 /* $. Colours
 \*----------------------------------------------------------------*/
+
 $color-text: #222;
-$color-brand: #663399;
-$color-comp: #CDCCB7;
-$color-background: #EEE;
-$color-keyline: #CCC;
+$color-bg: #f5f5f6;
+$color-brand: #1B49BE;
+
 
 
 /* $. Typography
 \*----------------------------------------------------------------*/
-$baseline: 1em;
+
 $font-sans: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
 $font-serif: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 
 
-/* $. layout
+
+/* $. Layout
 \*----------------------------------------------------------------*/
-$container-max-width: 68.5em;
-$media-img-gutter: 2em;
-$island-padding: 1.5em;
-$islet-padding: $island-padding / 2;
+
+$baseline: 1em;
+
+
+
+/* $. Z axis
+\*----------------------------------------------------------------*/
+
+$z-index-1: 1;
+$z-index-2: 5;
+$z-index-3: 10;
+$z-index-4: 15;
+$z-index-5: 20;

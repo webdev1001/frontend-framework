@@ -4,63 +4,68 @@
  * Sections:
  *    $. Vertical Rhythm
  *    $. Headings and Common Styles
- *    $. Blockquotes
  */
+
 
 
 /* $. Vertical Rhythm
 \*----------------------------------------------------------------*/
-h1, h2, h3, h4, h5, h6 { margin-bottom: .65em; margin-top: $baseline;  line-height: 1; }
-h1, blockquote, pre, p, ul, ol, dl, hr { margin-top: 0; }
-p, ul, ol, dl, hr, form, table, blockquote, pre { margin-bottom: $baseline; }
-hr { border-top: 1px solid $color-keyline; }
-blockquote > :last-child, ul > :last-child, ol > :last-child, dl > :last-child { margin-bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: $baseline;
+    line-height: 1.2;
+}
+
+blockquote, pre, p, ul, ol, dl, hr {
+    margin-top: 0;
+}
+
+p, ul, ol, dl, hr, form, table, blockquote, pre {
+    margin-bottom: $baseline;
+}
+
+ul > :last-child,
+ol > :last-child,
+dl > :last-child,
+blockquote > :last-child {
+    margin-bottom: 0;
+}
+
 
 
 /* $. Headings and Common Styles
 \*----------------------------------------------------------------*/
-h1, .alpha { @include font-size(36); }
-h2, .beta {  @include font-size(30); }
-h3, .gamma { @include font-size(24); }
-h4, .delta { @include font-size(20); }
-h5, .epsilon { @include font-size(16); }
-h6, .zeta { @include font-size(14); }
 
-.intro { font-size: 1.25em; }
-.headline { border-bottom: 1px solid $color-keyline; padding-bottom: .45em; }
-
-
-/* $. Blockquotes
-\*----------------------------------------------------------------*/
-blockquote {
-    clear: both;
-    margin-left: 0;
-    margin-right: 0;
-    font-family: $font-serif;
-    font-style: italic;
-
-    @include respond-min($bp2) {
-        padding-left: 2em;
-        padding-right: 2em;
-    }
-
-    p {
-        font-size: 1.35em;
-    }
-
-    p + .source {
-        margin-top: -$baseline;
-    }
+h1, .alpha {
+    font-size: 2.25rem;
 }
 
-.source {
-    display: block;
-    font-family: $font-sans;
-    font-size: 1em;
-    font-weight: bold;
-    font-style: normal;
+h2, .beta {
+    font-size: 1.875rem;
+}
 
-    &:before {
-        content:"\2013\0020";
-    }
+h3, .gamma {
+    font-size: 1.5rem;
+}
+
+h4, .delta {
+    font-size: 1.25rem;
+}
+
+h5, .epsilon {
+    font-size: 1rem;
+}
+
+h6, .zeta {
+    font-size: 0.875rem;
+}
+
+.intro {
+    font-size: 1.25em;
+}
+
+.headline {
+    border-bottom: 1px solid darken($color-bg, 10%);
+    padding-bottom: .45em;
 }

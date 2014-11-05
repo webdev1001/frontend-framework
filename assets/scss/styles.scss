@@ -1,58 +1,70 @@
+/**
+ * Title:
+ *    Main Stylesheet
+ * Description:
+ *    This is the main Scss file which will import all partials and
+ *    compile into: assets/css/styles.css
+ * Sections:
+ *    $. Config
+ *    $. Base
+ *    $. Layout
+ *    $. Modules
+ *    $. Interface
+ *    $. Helpers
+ */
+
+
+
+/* $. Config - Variables, global mixins & Bower components
+\*----------------------------------------------------------------*/
+
 @charset "UTF-8";
-/*----------------------------------------------------------------------------------------*\
- * Mixd Front-end Framework
- *
- * Author   : Mixd
- * Website  : http://mixd.co.uk
- * GitHub   : http://github.com/Mixd/Mixd-CSS-Framework
- *
-\*----------------------------------------------------------------------------------------*/
+@import "config/vars";
+@import "config/mixins";
+@import "config/bower";
 
-/*----------------------------------------------------------------------------------------*\
- $.Configuration
-\*----------------------------------------------------------------------------------------*/
 
-@import "config/vars";              // Global variables
-@import "config/mixins";            // Project and third-party mixins
-@import "config/bower";             // Bower Components & Grid
 
-/*----------------------------------------------------------------------------------------*\
- $.Base
-\*----------------------------------------------------------------------------------------*/
+/* $. Base - Project defaults & Element styling
+\*----------------------------------------------------------------*/
 
-@import "base/defaults";            // General defaults
-@import "base/project";             // Project specific defaults
-@import "base/typography";          // Typographic defaults and settings
+@import "base/defaults";
+@import "base/elements";
+@import "base/typography";
+@import "base/lists";
+@import "base/forms";
+@import "base/tables";
 
-/*----------------------------------------------------------------------------------------*\
- $.Layout
-\*----------------------------------------------------------------------------------------*/
 
-@import "layout/containers";        // Main container blocks
 
-/*----------------------------------------------------------------------------------------*\
- $.Modules / Objects
-\*----------------------------------------------------------------------------------------*/
+/* $. Modules - Global objects i.e. .btn, .island, etc
+\*----------------------------------------------------------------*/
 
-// Reusable modules and objects that contain no project-specific styling. Uncomment as necessary.
-@import "modules/media";            // .media object
-@import "modules/island";           // .island object
-@import "modules/nav";              // Navigation objects
-@import "modules/inserts";          // Alerts etc.
-/*
-@import "modules/tabs";             // tabs
-*/
+@import "modules/btn";
+@import "modules/media";
+@import "modules/island";
+@import "modules/nav";
+@import "modules/breadcrumb";
 
-/*----------------------------------------------------------------------------------------*\
- $. Interface
-\*----------------------------------------------------------------------------------------*/
+
+
+/* $. Interface - Project specific objects i.e. .work, .product, etc
+\*----------------------------------------------------------------*/
 
 // Include your project specific partials here!
 
-/*----------------------------------------------------------------------------------------*\
- $.Helpers
-\*----------------------------------------------------------------------------------------*/
 
-@import "helpers/clearfix";         // Micro clearfix
-@import "helpers/debug";            // Breakpoint debugging
-@import "helpers/overrides";        // Overriding classes
+
+/* $. Layout - Page based layouts i.e. .header, .page-86, etc
+\*----------------------------------------------------------------*/
+
+@import "layout/container";
+
+
+
+/* $. Helpers - i.e. Clearfixes, accessbility hidden, etc
+\*----------------------------------------------------------------*/
+
+@import "helpers/extras";
+@import "helpers/overrides";
+@import "helpers/debug";

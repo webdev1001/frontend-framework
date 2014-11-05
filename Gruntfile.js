@@ -4,18 +4,17 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-contrib-watch' );
     grunt.loadNpmTasks( 'grunt-contrib-sass' );
     grunt.loadNpmTasks( 'grunt-contrib-uglify' );
+    grunt.loadNpmTasks( 'grunt-pixrem' );
     grunt.loadNpmTasks( 'grunt-autoprefixer' );
-    grunt.loadNpmTasks( "grunt-modernizr" );
+    grunt.loadNpmTasks( 'grunt-modernizr' );
     grunt.loadNpmTasks( 'grunt-imageoptim' );
     grunt.loadNpmTasks( 'grunt-svgmin' );
-    grunt.loadNpmTasks( 'grunt-svg2png' );
     grunt.loadNpmTasks( 'grunt-grunticon' );
 
 
     // Keep directories in variable for easy changes and CMS integration
     var dirs = {
         assets: 'assets',
-        compassConfig: 'config.rb',
         components: 'components'
     }
 
@@ -27,12 +26,14 @@ module.exports = function( grunt ) {
         uglify: {
             scripts: {
                 files: {
-                    '<%= dirs.assets %>/js/all.min.js':
-                    [
+                    '<%= dirs.assets %>/js/min/main.min.js': [
                         '<%= dirs.components %>/jquery/dist/jquery.min.js',
                         '<%= dirs.assets %>/grunticon/grunticon.loader.txt',
-                        '<%= dirs.assets %>/js/vendor/*.js',
-                        '<%= dirs.assets %>/js/_*.js'
+                        '<%= dirs.assets %>/js/main.js'
+                    ],
+                    '<%= dirs.assets %>/js/min/head.min.js': [
+                        '<%= dirs.assets %>/js/vendor/modernizr.js',
+                        '<%= dirs.assets %>/js/head.js'
                     ]
                 }
             }
@@ -41,15 +42,13 @@ module.exports = function( grunt ) {
         // Compile Sass/Scss
         sass: {
             options: {
-                bundleExec: true
+                bundleExec: true,
+                style: 'compressed'
             },
             dev: {
                 files: {
                     '<%= dirs.assets %>/css/styles.css': '<%= dirs.assets %>/scss/styles.scss'
-                },
-                options: {
-                    style: 'nested',
-                },
+                }
             },
             dist: {
                 files: [{
@@ -59,6 +58,19 @@ module.exports = function( grunt ) {
                   dest: '<%= dirs.assets %>/css/',
                   ext: '.css'
                 }]
+            }
+        },
+
+        // Fallback for rem's
+        pixrem: {
+            options: {
+                rootvalue: '1em'
+            },
+            dist: {
+                files: {
+                    '<%= dirs.assets %>/css/styles.css': ['<%= dirs.assets %>/css/styles.css'],
+                    '<%= dirs.assets %>/css/ie.css': ['<%= dirs.assets %>/css/ie.css'],
+                }
             }
         },
 
@@ -72,12 +84,12 @@ module.exports = function( grunt ) {
                 flatten: true,
                 src: '<%= dirs.assets %>/css/*.css',
                 dest: '<%= dirs.assets %>/css'
-            },
+            }
         },
 
         // Optimise Images
         imageoptim: {
-            src: [ '<%= dirs.assets %>/img' ],
+            src: '<%= dirs.assets %>/img',
             options: {
                 quitAfter: true
             }
@@ -158,7 +170,7 @@ module.exports = function( grunt ) {
                 tasks: [ 'sass:dev' ],
                 options: {
                     livereload: true
-                },
+                }
             },
             svg: {
                 files: '<%= dirs.assets %>/img/icons/*.svg',
@@ -178,10 +190,10 @@ module.exports = function( grunt ) {
             'grunticon',
             'imageoptim',
             'sass:dist',
+            'pixrem:dist',
             'autoprefixer',
             'modernizr',
             'uglify'
         ]
     );
-
 }

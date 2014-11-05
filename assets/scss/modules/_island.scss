@@ -1,16 +1,42 @@
-/* $. Island Object - http://goo.gl/1XYHG
+/**
+ * Title:
+ *    Island Module - http://goo.gl/1XYHG
+ * Description:
+ *    The .island module and its extensions
+ * Sections:
+ *    $. Setup
+ *    $. Component
+ *    $. Modifications
+ */
+
+
+
+/* $. Setup
 \*----------------------------------------------------------------*/
 
-.island {
-    padding: $island-padding;
-    background-color: $color-comp;
-    margin-bottom: 1em;
+%island {
+    padding: $baseline*1.5;
+    margin-bottom: $baseline;
 
     > :last-child {
         margin-bottom: 0;
     }
 }
 
-.islet {
-    padding: $islet-padding;
+
+
+/* $. Component
+\*----------------------------------------------------------------*/
+
+.island {
+    @extend %island;
 }
+
+
+
+/* $. Modifications
+\*----------------------------------------------------------------*/
+
+.island--solid {}
+
+.island--slim {}

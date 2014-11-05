@@ -1,0 +1,46 @@
+/**
+ * Title:
+ *    Tables
+ * Description:
+ *    Styling of tables and their variations
+ * Sections:
+ *    $. Basics
+ *    $. Your Styles
+ */
+
+
+
+/* $. Basics
+\*----------------------------------------------------------------*/
+
+table {
+    width: 100%;
+}
+
+td, th, caption {
+    padding: .5em;
+    border: 1px solid darken($color-bg, 10%);
+    vertical-align: top;
+}
+
+tr:nth-child(odd) td {
+    background: darken($color-bg, 5%);
+}
+
+th, caption {
+    font-weight: bold;
+    background: darken($color-bg, 10%);
+}
+
+caption {
+    background: darken($color-bg, 12.5%);
+}
+
+
+
+/* $. Your Styles
+\*----------------------------------------------------------------*/
+
+.table--hovered tr:hover td {
+    background: darken($color-bg, 7.5%);
+}

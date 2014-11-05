@@ -1,31 +1,30 @@
-/* $. Overrides
-\*----------------------------------------------------------------*/
+/**
+ * Title:
+ *    Overrides
+ * Description:
+ *    Global overrides to be used throughout a project. Using !important as
+ *    we always want them to override existing styles.
+ * Sections:
+ *    $. Box Model
+ *    $. Lists
+ */
 
-/* These mostly use `!important` as we always want them to override existing styles */
+
+
+/* $. Box Model
+\*----------------------------------------------------------------*/
 
 .push--top { margin-top: $baseline !important; }
 .push--bottom { margin-bottom: $baseline !important; }
-
 .zero--top { margin-top: 0 !important; }
 .zero--bottom { margin-bottom: 0 !important; }
+.block { display: block; }
 
-.weight--light { font-weight:300 !important; }
-.weight--normal { font-weight:400 !important; }
-.weight--semibold { font-weight:600 !important; }
+
+
+/* $. Lists
+\*----------------------------------------------------------------*/
 
 .list--unset { list-style: none !important; margin-left: 0 !important; }
 .list--numbers { list-style: decimal !important; }
 .list--bullets { list-style: disc !important; }
-
-.block { display: block; }
-
-.accessibility {
-    border: 0 !important;
-    clip: rect(0 0 0 0) !important;
-    height: 1px !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important;
-}

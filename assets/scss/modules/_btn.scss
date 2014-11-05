@@ -1,0 +1,57 @@
+/**
+ * Title:
+ *    Button Module
+ * Description:
+ *    The .btn module and its extensions
+ * Sections:
+ *    $. Setup
+ *    $. Component
+ *    $. Modifications
+ */
+
+
+
+/* $. Setup
+\*----------------------------------------------------------------*/
+
+%btn {
+    display: inline-block;
+    padding: $baseline/2 $baseline;
+    border: 0;
+    transition: background .15s ease-out;
+}
+
+@mixin btn($text, $bg) {
+    color: $text;
+    background: $bg;
+
+    &:hover,
+    &:focus {
+        color: $text;
+        background: darken($bg, 10%);
+    }
+}
+
+
+
+/* $. Component
+\*----------------------------------------------------------------*/
+
+button,
+input[type="button"],
+input[type="submit"],
+.btn {
+    @extend %btn;
+}
+
+
+
+/* $. Modifications
+\*----------------------------------------------------------------*/
+
+.btn--primary {
+    @include btn(#fff, $color-brand);
+}
+
+.btn--secondary {}
+.btn--large {}

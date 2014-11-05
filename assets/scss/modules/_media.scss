@@ -1,45 +1,62 @@
-/* $. Media Object - http://goo.gl/Xf6MJ
+/**
+ * Title:
+ *    Media Module - http://goo.gl/Xf6MJ
+ * Description:
+ *    The .media module and its extensions
+ * Sections:
+ *    $. Setup
+ *    $. Component
+ *    $. Modifications
+ */
+
+
+
+/* $. Setup
+\*----------------------------------------------------------------*/
+
+// Any setup goes here
+
+
+
+/* $. Component
 \*----------------------------------------------------------------*/
 
 .media {
-    margin-bottom: $baseline;
     @extend .cf;
-}
-
-.media__img img,
-img.media__img
-{
     margin-bottom: $baseline;
-
-    @include respond-min($bp2) {
-        margin-bottom: 0;
-    }
 }
 
 .media__body {
-    @include respond-min($bp2) {
-        overflow: hidden;
-    }
-
     &:last-child {
         margin-bottom: 0;
+    }
+
+    @include respond-min($bp2) {
+        overflow: hidden;
     }
 }
 
 .media__img {
+    margin-bottom: $baseline;
+
     @include respond-min($bp2) {
         float: left;
         margin-bottom: 0;
-        margin-right: $media-img-gutter;
+        margin-right: $baseline*2;
     }
 }
+
+
+
+/* $. Modifications
+\*----------------------------------------------------------------*/
 
 .media--flipped {
     .media__img {
         @include respond-min($bp2) {
             float: right;
+            margin-left: $baseline*2;
             margin-right: 0;
-            margin-left: $media-img-gutter;
         }
     }
 }
