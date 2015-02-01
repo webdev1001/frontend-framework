@@ -36,7 +36,9 @@
 @include respond-min($bp4) {
     @include griddle-build(12 5, "--bp4");
 }
-
+@include respond-min($bp5) {
+    @include griddle-build(12 5, "--bp5");
+}
 
 
 /* $. Hotfixes
