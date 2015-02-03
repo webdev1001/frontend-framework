@@ -12,6 +12,7 @@
     "grunt-modernizr": "~0.5.2",
     "grunt-pixrem": "^0.1.2",
     "grunt-remfallback": "0.0.5",
+    "grunt-sass": "^0.17.0",
     "grunt-svgmin": "~0.4.0"
   }
 }

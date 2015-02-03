@@ -2,7 +2,6 @@ module.exports = function( grunt ) {
 
     // Load NPM tasks
     grunt.loadNpmTasks( 'grunt-contrib-watch' );
-    grunt.loadNpmTasks( 'grunt-contrib-sass' );
     grunt.loadNpmTasks( 'grunt-contrib-uglify' );
     grunt.loadNpmTasks( 'grunt-pixrem' );
     grunt.loadNpmTasks( 'grunt-autoprefixer' );
@@ -10,6 +9,7 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks( 'grunt-imageoptim' );
     grunt.loadNpmTasks( 'grunt-svgmin' );
     grunt.loadNpmTasks( 'grunt-grunticon' );
+    grunt.loadNpmTasks( 'grunt-sass' );
 
 
     // Keep directories in variable for easy changes and CMS integration
@@ -39,11 +39,11 @@ module.exports = function( grunt ) {
             }
         },
 
-        // Compile Sass/Scss
+        // Compile Sass
         sass: {
             options: {
-                bundleExec: true,
-                style: 'compressed'
+                sourceMap: true,
+                outputStyle: 'compressed'
             },
             dev: {
                 files: {
@@ -51,13 +51,10 @@ module.exports = function( grunt ) {
                 }
             },
             dist: {
-                files: [{
-                  expand: true,
-                  cwd: '<%= dirs.assets %>/scss/',
-                  src: ['*.scss'],
-                  dest: '<%= dirs.assets %>/css/',
-                  ext: '.css'
-                }]
+                files: {
+                    '<%= dirs.assets %>/css/styles.css': '<%= dirs.assets %>/scss/styles.scss',
+                    '<%= dirs.assets %>/css/ie.css': '<%= dirs.assets %>/scss/ie.scss'
+                }
             }
         },
 
