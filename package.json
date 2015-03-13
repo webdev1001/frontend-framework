@@ -1,0 +1,9 @@
+{
+  "name": "Mixd-Frontend-Framework",
+  "version": "1.4.0",
+  "homepage": "https://github.com/Mixd/frontend-framework",
+  "repository": "Mixd/frontend-framework",
+  "devDependencies": {
+    "gulp": "^3.8.11"
+  }
+}
