@@ -4,6 +4,7 @@
   "homepage": "https://github.com/Mixd/frontend-framework",
   "repository": "Mixd/frontend-framework",
   "devDependencies": {
-    "gulp": "^3.8.11"
+    "gulp": "^3.8.11",
+    "gulp-sass": "^1.3.3"
   }
 }
