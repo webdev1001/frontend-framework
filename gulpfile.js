@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
     pixrem = require('gulp-pixrem'),
-    livereload = require('gulp-livereload');
+    livereload = require('gulp-livereload'),
+    plumber = require('gulp-plumber');
 
 // Create asset variables
 var paths = {
@@ -18,6 +19,7 @@ var paths = {
 
 gulp.task('sass', function () {
     gulp.src( [paths.scss] + '*.scss' )
+        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(autoprefixer({
