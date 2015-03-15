@@ -31,7 +31,7 @@ gulp.task('sass', function () {
         .pipe(sourcemaps.write( './maps' ))
         .pipe(gulp.dest( [paths.css] + '' ))
         .pipe(livereload())
-        .pipe(notify("Styles compiled @ assets/css"));
+        .pipe(notify("Styles compiled – assets/css/*.css"));
 });
 
 gulp.task('watch', function () {
