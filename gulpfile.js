@@ -1,4 +1,27 @@
-// Require Node Packages
+/**
+ ***************************************************************************
+ * Mixd Front-end Framework - Gulp Setup
+ ***************************************************************************
+ *
+ * This file sets up all the Gulp Tasks that are used for this framework.
+ *
+ * 
+ * Sections
+ * 
+ * $. Require node packages
+ * $. Create asset variables
+ * $. Task: Compile Stylesheets
+ * $. Task: Watch files for changes
+ * $. Task: Default
+ * 
+ *
+ */
+
+
+
+/* $. Require node packages
+\*----------------------------------------------------------------*/
+
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -8,7 +31,11 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     notify = require("gulp-notify");
 
-// Create asset variables
+
+
+/* $. Create asset variables
+\*----------------------------------------------------------------*/
+
 var paths = {
     assets: 'assets/',
     css: 'assets/css/',
@@ -17,6 +44,11 @@ var paths = {
     img: 'assets/img/',
     bower: 'components/'
 }
+
+
+
+/* $. Task: Compile Stylesheets
+\*----------------------------------------------------------------*/
 
 gulp.task('sass', function () {
     gulp.src( [paths.scss] + '*.scss' )
@@ -31,13 +63,26 @@ gulp.task('sass', function () {
         .pipe(sourcemaps.write( './maps' ))
         .pipe(gulp.dest( [paths.css] + '' ))
         .pipe(livereload())
-        .pipe(notify("Styles compiled – assets/css/*.css"));
+        .pipe(notify({
+            message: 'Compiled Styles: assets/css/*.css',
+            onLast: true
+        }));
 });
+
+
+
+/* $. Task: Watch files for changes
+\*----------------------------------------------------------------*/
 
 gulp.task('watch', function () {
     livereload.listen();
     gulp.watch( [paths.scss] + '**/*.scss', ['sass']);
 });
+
+
+
+/* $. Task: Default
+\*----------------------------------------------------------------*/
 
 gulp.task('default', function() {
     gulp.start('sass');
