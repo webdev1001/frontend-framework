@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     pixrem = require('gulp-pixrem'),
     livereload = require('gulp-livereload'),
-    plumber = require('gulp-plumber');
+    plumber = require('gulp-plumber'),
+    notify = require("gulp-notify");
 
 // Create asset variables
 var paths = {
@@ -29,7 +30,8 @@ gulp.task('sass', function () {
         .pipe(pixrem('1em'))
         .pipe(sourcemaps.write( './maps' ))
         .pipe(gulp.dest( [paths.css] + '' ))
-        .pipe(livereload());
+        .pipe(livereload())
+        .pipe(notify("Styles compiled @ assets/css"));
 });
 
 gulp.task('watch', function () {
