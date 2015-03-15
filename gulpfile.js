@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
-    pixrem = require('gulp-pixrem');
+    pixrem = require('gulp-pixrem'),
+    livereload = require('gulp-livereload');
 
 // Create asset variables
 var paths = {
@@ -25,7 +26,13 @@ gulp.task('sass', function () {
         }))
         .pipe(pixrem('1em'))
         .pipe(sourcemaps.write( './maps' ))
-        .pipe(gulp.dest( [paths.css] + '' ));
+        .pipe(gulp.dest( [paths.css] + '' ))
+        .pipe(livereload());
+});
+
+gulp.task('watch', function () {
+    livereload.listen();
+    gulp.watch( [paths.scss] + '**/*.scss', ['sass']);
 });
 
 gulp.task('default', function() {
